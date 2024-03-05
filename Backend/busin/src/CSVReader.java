@@ -22,6 +22,8 @@ public class CSVReader {
             bus.add(new Bus(values[0],values[1],values[2],values[3],values[4],values[5]));
 
         }
+        System.out.println("FILE READ SUCCESSFULLY");
+        //for(Bus hi:bus) System.out.println(hi.getBusDepature()+hi.getBusDestination()+hi.getBusSource()+hi.getBusType()+hi.getBusArrival()+hi.getBusName());
         return bus;
     }
 

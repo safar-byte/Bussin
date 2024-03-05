@@ -21,6 +21,8 @@ public class Time {
             }
 
         }
+        for(Bus hi:timeShedule) System.out.println(hi.getBusDepature()+hi.getBusName());
+        System.out.println("FILE SCHEDULE CREATED SUCCESSFULLY");
         return timeShedule;
 
 
