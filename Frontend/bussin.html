@@ -22,7 +22,7 @@
         <form id="form">`
           <div class="busDetails">
             <label for="name">Bus Name:
-          <input type="text" name="busName" id="busName" /></label>
+          <input type="text" name="busName" id="busName" required/></label>
           <label for="type">
             Bus Type:
             <input list="bustype" name="type" id="busType" required />
@@ -35,11 +35,11 @@
           </div>
           <div class="travelDetails">
             <label for="source">Source: 
-          <input type="text" name="source" id="source" /></label>
+          <input type="text" name="source" id="source" required /></label>
           <label for="destination">Destination:
-          <input type="text" name="destination" id="destination" /> </label>
+          <input type="text" name="destination" id="destination" required/> </label>
           <label for="time">Departure Time: 
-          <input type="time" name="time" id="time"></label>
+          <input type="time" name="time" id="time" required></label>
           </div>        
           <div class="submitBtnDiv">
             <input type="submit" value="Submit" id="submitBtn">
