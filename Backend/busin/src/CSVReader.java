@@ -10,6 +10,7 @@ public class CSVReader {
     public CSVReader(String filesrc) throws IOException {
      this.filesrc=filesrc;
     }
+
     public ArrayList<Bus> getArray() throws IOException {
         ArrayList<Bus> bus=new ArrayList<>();
         java.io.FileReader f = new java.io.FileReader(filesrc);
