@@ -7,7 +7,9 @@ import java.util.ArrayList;
 public class CSVReader {
 
 
+
     public static ArrayList<Bus> getvalue(String filesrc) throws IOException {
+
         ArrayList<Bus> bus=new ArrayList<>();
         FileReader f = new FileReader(filesrc);
         BufferedReader br = new BufferedReader(f);
@@ -45,6 +47,8 @@ public class CSVReader {
 
         }
         }
+        System.out.println("FILE READ SUCCESSFULLY");
+        //for(Bus hi:bus) System.out.println(hi.getBusDepature()+hi.getBusDestination()+hi.getBusSource()+hi.getBusType()+hi.getBusArrival()+hi.getBusName());
         return bus;
     }
 

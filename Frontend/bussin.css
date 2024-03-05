@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     background: #dedede;
+    height: 100%;
+    width: 100%;
     }
 
 .sidebar{   
@@ -17,29 +19,13 @@ body{
     text-align: center;
     font-size: 30px;
     margin: 0px 20px 0px 20px ;
+    padding: 30px;
+}
+.sidebarLogo img{
+    width:100px;
     height: 100px;
-
+    border-radius: 50%;
 }
-.sidebarFooter{
-    text-align: center;
-    border-top   : 2px solid #7b91a8;
-    width: auto;
-    margin: 50px 20px 0px 20px ;
-    padding: 20px;
-    height: 100px;
-
-}
-#Logout{
-    color: #fff;
-    height: 30px;
-    width: 75px;
-    border-radius: 5px;
-    background: #0a2844;
-    margin-top: 20px;
-    border-width: 1px;
-    border-color: #000000;
-}
-
 .sidebarContent{
     width: auto;
     text-align: left;
@@ -52,7 +38,7 @@ body{
     height: 100vh;
     width: calc(100% - 300px);
 }
-.sidebar ul li {
+/* .sidebar ul li {
     color: #7b91a8;
     width: auto; 
     height: 30px; 
@@ -60,22 +46,16 @@ body{
     list-style-type: none;
     text-align: left; 
     margin: 0px 20px 0px 20px;  
-}
-.sidebar ul {
+} */
+/* .sidebar ul {
     padding-left: 10px; 
-}
+} */
 
 header{
     text-align: end;
     height: 40px;
     padding: 20px;
-    #search-bar{
-        border: 2px solid #667f9b;
-        border-radius: 10px;
-        height: 70%;
-        width: 30%;
-        margin-right: 25px;
-    }
+
     #createButton{
         color: #ffffff;
         background: blue;
@@ -84,6 +64,36 @@ header{
         width: 10%;
         border: none;
     }
+}
+
+
+
+.busDetails{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+input[type="text"],#busType{
+    width: 250px;
+    height: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    border: 0;
+}
+
+#time{
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    border: 0;
+}
+
+
+.travelDetails{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
 }
 
 
@@ -134,4 +144,33 @@ table {
     box-shadow: 0px 0px 5px #998787;
     display: block;
     background: white;
+    overflow: auto;
+
 }
+#createForm {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0px 20px 0px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.submitBtnDiv{
+    display: flex;
+    justify-content: center;
+
+}
+.submitBtnDiv input[type="submit"]{
+    background-color: #633eea;
+    color: white;
+    width: 125px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.submitBtnDiv input[type="submit"]:hover{
+    background-color: darkgrey;
+    transition: .3s ease;
+}
+
+
