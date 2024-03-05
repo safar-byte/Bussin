@@ -5,33 +5,40 @@ import java.util.ArrayList;
 
 public class SourceDest {
 
+    ArrayList<Bus> sources=new ArrayList<>();
+    ArrayList<Bus> dests=new ArrayList<>();
+    ArrayList<Bus> sourcedest=new ArrayList<>();
 
-    public SourceDest(String filesrc,String src,String dest) throws IOException {
-        ArrayList<String> sources=new ArrayList<>();
-        ArrayList<String> dests=new ArrayList<>();
-        ArrayList<String> sourcedest=new ArrayList<>();
-       FileReader f = new FileReader(filesrc);
-       BufferedReader br = new BufferedReader(f);
-{
-            String s;
-            while ((s = br.readLine()) != null) {
+    public ArrayList<Bus> getSources() {
+        return sources;
+    }
 
-                String[] values=s.split(",");
-                if(values[2]==src)
-                {
-                    sources.add(s);
-                }
-                if(values[3]==dest)
-                {
-                    dests.add(s);
-                }
-                if(values[2]==src && values[3]==dest )
-                {
-                    sourcedest.add(s);
-                }
-                System.out.println(s);
+    public ArrayList<Bus> getDests() {
+        return dests;
+    }
+
+    public ArrayList<Bus> getSourcedest() {
+        return sourcedest;
+    }
+
+    public void runSourceDest(ArrayList<Bus> Bus, String src, String dest) throws IOException {
+
+        for(Bus bus:Bus)
+        {
+            if(bus.getBusSource().equals(src))
+            {
+                sources.add(bus);
+            }
+            if(bus.getBusSource().equals(src) &&  bus.getBusDestination().equals(dest))
+            {
+                sourcedest.add(bus);
+            }
+            if(bus.getBusDestination().equals(dest))
+            {
+                dests.add(bus);
             }
         }
-        br.close();
+
+
     }
 }
