@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class Time {
     public ArrayList<Bus> Filter(ArrayList<Bus> bustime ,String busArrival , String busDepature) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:MM");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         LocalTime StartTime = LocalTime.parse("9:00",formatter);
         LocalTime endTime = LocalTime.parse("12:00",formatter);
-        LocalTime time =LocalTime.parse("HH:MM",formatter);
+        LocalTime time =LocalTime.parse("HH:mm",formatter);
 
         ArrayList<Bus> timeShedule = new ArrayList<>();
         for (Bus bus :bustime){
