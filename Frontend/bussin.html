@@ -1,98 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bussin.css" />
+    
 </head>
 
-<body>
+  <body>
     <div class="sidebar">
-        <div class="logo">
-            <img src="./assets/busin.jpeg" alt="Logo" />
-            <hr />
-        <div class="sidebarContent">
-            <ul>
-                <li>Dashboard</li>
-                <li>Warehouse Structure</li>
-                <li style="color: #ffffff;">Receipt</li>
-                <li>Marketplace</li>
-                <li>Shipments</li>
-                <li>Stocks</li>
-                <li>Handhelds</li>
-            </ul>
-        </div>
-        <div class="sidebarFooter">
-            <p style="color: #ffffff;">emailID</p>
-            <button type="button" id="Logout">Logout</button>
-        </div>
+      <div class="sidebarLogo">
+        <img src="./assets/busin.jpeg" alt="Logo" />
+      </div>
     </div>
     <div class="main">
-        <header>
-            <input type="text" id="search-bar" placeholder="Search...">
-            <button type="button" id="createButton">+ Create New</button>
-        </header>
-        <div class="mid">
-            <table >
-                <thead>
-                    <tr>
-                        <td></td>
-                        <th>ID</th>
-                        <th>Type</th>
-                        <th>Reference ID</th>
-                        <th>Source WH</th>
-                        <th>Dest WH</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                </tbody>
-            </table>    
-        </div>
-        
+      <header>
+        <button type="button" id="createButton">+ Create New</button>
+      </header>
+      <div id="createForm" style="display: none;">
+        <form id="form">`
+          <div class="busDetails">
+            <label for="name">Bus Name:
+          <input type="text" name="busName" id="busName" required/></label>
+          <label for="type">
+            Bus Type:
+            <input list="bustype" name="type" id="busType" required />
+            <datalist id="bustype">
+              <option value="SuperFast"></option>
+              <option value="Fast Passenger"></option>
+              <option value="Ordinary"></option>
+            </datalist>
+          </label>
+          </div>
+          <div class="travelDetails">
+            <label for="source">Source: 
+          <input type="text" name="source" id="source" required /></label>
+          <label for="destination">Destination:
+          <input type="text" name="destination" id="destination" required/> </label>
+          <label for="time">Departure Time: 
+          <input type="time" name="time" id="time" required></label>
+          </div>        
+          <div class="submitBtnDiv">
+            <input type="submit" value="Submit" id="submitBtn">
+          </div>
+        </form>
+      </div>
+      <div class="mid">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Source</th>
+              <th>Destination</th>
+              <th>Departure</th>
+            </tr>
+          </thead>
+          <tbody id="entries"></tbody>
+        </table>
+      </div>
     </div>
-</body>
+    <script src="createForm.js"></script>
+    <script src="formTable.js"></script>
+    <script src="index.js"></script>
+
+  </body>
 </html>
