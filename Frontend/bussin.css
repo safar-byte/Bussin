@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #dedede;
+    }
+
+.sidebar{   
+    display: inline-block;
+    background: #0a2844;
+    height: 100vh;
+    width: 300px;
+    border-radius: 10px;
+    
+}
+.sidebarLogo{
+    border-bottom   : 2px solid #7b91a8;
+    text-align: center;
+    font-size: 30px;
+    margin: 0px 20px 0px 20px ;
+    height: 100px;
+
+}
+.sidebarFooter{
+    text-align: center;
+    border-top   : 2px solid #7b91a8;
+    width: auto;
+    margin: 50px 20px 0px 20px ;
+    padding: 20px;
+    height: 100px;
+
+}
+#Logout{
+    color: #fff;
+    height: 30px;
+    width: 75px;
+    border-radius: 5px;
+    background: #0a2844;
+    margin-top: 20px;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.sidebarContent{
+    width: auto;
+    text-align: left;
+    padding-left: 20px;
+    height: calc(100vh - 350px);
+    
+}
+.main{
+    float: right;
+    height: 100vh;
+    width: calc(100% - 300px);
+}
+.sidebar ul li {
+    color: #7b91a8;
+    width: auto; 
+    height: 30px; 
+    padding: 10px; 
+    list-style-type: none;
+    text-align: left; 
+    margin: 0px 20px 0px 20px;  
+}
+.sidebar ul {
+    padding-left: 10px; 
+}
+
+header{
+    text-align: end;
+    height: 40px;
+    padding: 20px;
+    #search-bar{
+        border: 2px solid #667f9b;
+        border-radius: 10px;
+        height: 70%;
+        width: 30%;
+        margin-right: 25px;
+    }
+    #createButton{
+        color: #ffffff;
+        background: blue;
+        border-radius: 5px;
+        height: 30px;
+        width: 10%;
+        border: none;
+    }
+}
+
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    padding: 20px;
+    margin: 0 auto;
+    width: 95%;
+        
+    }
+    th::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 20%; 
+        bottom: 20%; 
+        width: 0.5px; 
+        background-color: black; 
+    }
+    #StatusButton{
+        border-radius: 50px;
+        height: 25px;
+        width: 100px;
+        font-size: 13px;
+        background: #ffd9c3;
+        color: #c1896c;
+        border:2px solid #ddb49c;
+    }
+    td,th{
+        border-bottom: 1px solid black;
+        height: 25px;
+        padding: 10px 10px 10px 20px;
+    }
+    th{
+        
+        position: relative;
+
+ 
+}
+
+.mid{
+    height: calc(100vh - 120px);
+    margin: 20px;
+    text-align: center;
+    border: 2px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #998787;
+    display: block;
+    background: white;
+}
