@@ -4,16 +4,23 @@ This project is a Bus Schedule Management System designed to manage and display 
 
 Features
 Input Bus Details: Users can input bus details including source, destination, type (e.g., SUPERFAST, CITYFAST, INTERSTATE), and time range.
+
 Filtering: The system filters the generated bus schedule information based on the user's specified criteria.
+
 Display: Filtered bus schedules are displayed for the user, providing information such as bus type, source, destination, departure time, and arrival time.
 Usage
 Input Bus Details:
 Run the program and input the bus details when prompted.
+
+
 Enter the source, destination, type of bus, and time range (if applicable).
+
 Filtering:
 After inputting the bus details, the system filters the generated information based on the specified criteria.
+
 Display:
 Filtered bus schedules are displayed for the user, showing relevant information such as bus type, source, destination, departure time, and arrival time.
+
 Example
 Suppose the user wants to find bus schedules from "Kazhakootam" to "Kollam" between 8:00 AM and 11:00 AM. The user inputs the following details:
 
@@ -22,10 +29,7 @@ Destination: Kollam
 Time Range: 8:00 AM - 11:00 AM
 The system filters the bus schedules accordingly and displays the relevant information for buses matching the specified criteria.
 
-Technologies Used
-Python: Programming language used for development.
-Command-line Interface (CLI): Interface for user interaction and input.
-Data Structures: Used for storing and managing bus schedule data.
+
 Contributing
 Contributions to the project are welcome! Feel free to fork the repository, make your changes, and submit a pull request.
 
