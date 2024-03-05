@@ -1,98 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="bussin.css">
+    <link rel="stylesheet" href="bussin.css" />
+    <script src="formTable.js"></script>
 </head>
 
-<body>
+  <body>
     <div class="sidebar">
-        <div class="logo">
-            <img src="./assets/busin.jpeg" alt="Logo" />
-            <hr />
-        <div class="sidebarContent">
-            <ul>
-                <li>Dashboard</li>
-                <li>Warehouse Structure</li>
-                <li style="color: #ffffff;">Receipt</li>
-                <li>Marketplace</li>
-                <li>Shipments</li>
-                <li>Stocks</li>
-                <li>Handhelds</li>
-            </ul>
-        </div>
-        <div class="sidebarFooter">
-            <p style="color: #ffffff;">emailID</p>
-            <button type="button" id="Logout">Logout</button>
-        </div>
+      <div class="sidebarLogo">
+        <img src="./assets/busin.jpeg" alt="Logo" />
+      </div>
+
+      <div class="sidebarFooter">
+        <button type="button" id="Logout">Logout</button>
+      </div>
     </div>
     <div class="main">
-        <header>
-            <input type="text" id="search-bar" placeholder="Search...">
-            <button type="button" id="createButton">+ Create New</button>
-        </header>
-        <div class="mid">
-            <table >
-                <thead>
-                    <tr>
-                        <td></td>
-                        <th>ID</th>
-                        <th>Type</th>
-                        <th>Reference ID</th>
-                        <th>Source WH</th>
-                        <th>Dest WH</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>250850</td>
-                        <td>GR</td>
-                        <td>456789</td>
-                        <td>LA Warehouse</td>
-                        <td>NY Warehouse</td>
-                        <td><button type="button" id="StatusButton">Label Printing</button></td>
-                        <td>Delete</td>
-                    </tr>
-                </tbody>
-            </table>    
-        </div>
-        
+      <header>
+        <input type="text" id="search-bar" placeholder="Search..." />
+        <button type="button" id="createButton">+ Create New</button>
+      </header>
+      <div id="form-structure">
+        <form id="form">
+          <label for="name">Bus Name: </label>
+          <input type="text" name="busName" id="busName" /><br />
+          <label for="type">
+            Bus Type:
+            <input list="bustype" name="type" id="busType" required />
+            <datalist id="bustype">
+              <option value="SuperFast"></option>
+              <option value="Fast Passenger"></option>
+              <option value="Ordinary"></option></datalist
+          ></label>
+          <br />
+          <label for="source">Source: </label>
+          <input type="text" name="source" id="source" /><br />
+          <label for="destination">Destination: </label>
+          <input type="text" name="destination" id="destination" /><br />
+          <label for="arrival">Arrival Time: </label>
+          <input type="time" name="arrival" id="arrival" /><br />
+          <label for="departure">Departure Time: </label>
+          <input type="time" name="dept" id="dept"><br>
+          <input type="submit" value="Submit" id="submitBtn">
+        </form>
+      </div>
+      <div class="mid">
+        <table>
+          <thead>
+            <tr>
+              <td></td>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Source</th>
+              <th>Destination</th>
+              <th>Arrival</th>
+              <th>Departure</th>
+            </tr>
+          </thead>
+          <tbody id="entries"></tbody>
+        </table>
+      </div>
     </div>
-</body>
+    <script src="createForm.js"></script>
+  </body>
 </html>

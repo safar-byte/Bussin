@@ -17,12 +17,15 @@ body{
     text-align: center;
     font-size: 30px;
     margin: 0px 20px 0px 20px ;
+    padding: 30px;
+}
+.sidebarLogo img{
+    width:100px;
     height: 100px;
-
+    border-radius: 50%;
 }
 .sidebarFooter{
     text-align: center;
-    border-top   : 2px solid #7b91a8;
     width: auto;
     margin: 50px 20px 0px 20px ;
     padding: 20px;
@@ -52,7 +55,7 @@ body{
     height: 100vh;
     width: calc(100% - 300px);
 }
-.sidebar ul li {
+/* .sidebar ul li {
     color: #7b91a8;
     width: auto; 
     height: 30px; 
@@ -60,10 +63,10 @@ body{
     list-style-type: none;
     text-align: left; 
     margin: 0px 20px 0px 20px;  
-}
-.sidebar ul {
+} */
+/* .sidebar ul {
     padding-left: 10px; 
-}
+} */
 
 header{
     text-align: end;
@@ -84,6 +87,10 @@ header{
         width: 10%;
         border: none;
     }
+}
+
+#formstructure{
+    
 }
 
 
@@ -126,7 +133,7 @@ table {
 }
 
 .mid{
-    height: calc(100vh - 120px);
+    /* height: calc(100vh - 120px); */
     margin: 20px;
     text-align: center;
     border: 2px;
@@ -134,4 +141,11 @@ table {
     box-shadow: 0px 0px 5px #998787;
     display: block;
     background: white;
+}
+#createForm {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }

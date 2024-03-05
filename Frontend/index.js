@@ -38,4 +38,3 @@ function createJSON(id, type, source, destination, time){
         if (err) throw err;
         console.log('Data saved');
     })
-}
