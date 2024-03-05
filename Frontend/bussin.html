@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="bussin.css" />
-    <script src="formTable.js"></script>
+    
 </head>
 
   <body>
@@ -16,43 +16,44 @@
     </div>
     <div class="main">
       <header>
-        <input type="text" id="search-bar" placeholder="Search..." />
         <button type="button" id="createButton">+ Create New</button>
       </header>
       <div id="createForm" style="display: none;">
-        <form id="form">
-          <label for="name">Bus Name: </label>
-          <input type="text" name="busName" id="busName" /><br />
+        <form id="form">`
+          <div class="busDetails">
+            <label for="name">Bus Name:
+          <input type="text" name="busName" id="busName" /></label>
           <label for="type">
             Bus Type:
             <input list="bustype" name="type" id="busType" required />
             <datalist id="bustype">
               <option value="SuperFast"></option>
               <option value="Fast Passenger"></option>
-              <option value="Ordinary"></option></datalist
-          ></label>
-          <br />
-          <label for="source">Source: </label>
-          <input type="text" name="source" id="source" /><br />
-          <label for="destination">Destination: </label>
-          <input type="text" name="destination" id="destination" /><br />
-          <label for="arrival">Arrival Time: </label>
-          <input type="time" name="arrival" id="arrival" /><br />
-          <label for="departure">Departure Time: </label>
-          <input type="time" name="dept" id="dept"><br>
-          <input type="submit" value="Submit" id="submitBtn">
+              <option value="Ordinary"></option>
+            </datalist>
+          </label>
+          </div>
+          <div class="travelDetails">
+            <label for="source">Source: 
+          <input type="text" name="source" id="source" /></label>
+          <label for="destination">Destination:
+          <input type="text" name="destination" id="destination" /> </label>
+          <label for="time">Departure Time: 
+          <input type="time" name="time" id="time"></label>
+          </div>        
+          <div class="submitBtnDiv">
+            <input type="submit" value="Submit" id="submitBtn">
+          </div>
         </form>
       </div>
       <div class="mid">
         <table>
           <thead>
             <tr>
-              <td></td>
               <th>Name</th>
               <th>Type</th>
               <th>Source</th>
               <th>Destination</th>
-              <th>Arrival</th>
               <th>Departure</th>
             </tr>
           </thead>
@@ -61,5 +62,8 @@
       </div>
     </div>
     <script src="createForm.js"></script>
+    <script src="formTable.js"></script>
+    <script src="index.js"></script>
+
   </body>
 </html>
