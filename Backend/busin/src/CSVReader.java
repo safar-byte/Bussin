@@ -7,7 +7,7 @@ public class CSVReader {
 
     String filesrc;
 
-    public ArrayList<Bus> CSVReader(String filesrc) throws IOException {
+    public CSVReader(String filesrc) throws IOException {
      this.filesrc=filesrc;
     }
     public ArrayList<Bus> getArray() throws IOException {
