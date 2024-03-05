@@ -10,7 +10,7 @@ public class SourceDest {
         ArrayList<String> sources=new ArrayList<>();
         ArrayList<String> dests=new ArrayList<>();
         ArrayList<String> sourcedest=new ArrayList<>();
-       FileReader f = new FileReader(filesrc);
+       ArrayList<Bus> Bus = new FileReader(filesrc);
        BufferedReader br = new BufferedReader(f);
 {
             String s;
