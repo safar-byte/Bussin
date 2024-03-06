@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function adjustMidDivHeight(isFormVisible) {
 
-        if(isFormVisible){ midDiv.style.minHeight = `calc(100vh - 375px)`;}
+        if(isFormVisible){ midDiv.style.minHeight = `calc(100vh - 380px)`;}
         else{
             midDiv.style.minHeight = `calc(100vh - 175px)`
         }

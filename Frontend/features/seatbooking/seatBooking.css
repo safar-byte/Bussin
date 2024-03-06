@@ -121,7 +121,7 @@ table {
 
 .mid{
     position: relative;
-    min-height: calc(100vh - 330px);
+    min-height: calc(100vh - 328px);
     margin: 20px;
     text-align: center;
     border: 2px;
