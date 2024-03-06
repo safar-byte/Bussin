@@ -9,16 +9,20 @@ public class SourceDest {
     ArrayList<Bus> dests=new ArrayList<>();
     ArrayList<Bus> sourcedest=new ArrayList<>();
 
-    public ArrayList<Bus> getSD(ArrayList<Bus> Bus,String source,String dest,String reqd) {
+    public ArrayList<Bus> getSD(ArrayList<Bus> Bus,String source,String dest,String reqd) throws IOException {
         switch(reqd) {
             case "s":
                 runSourceDest(Bus,source,"");
+                return sources
                 break;
-            case y:
-                // code block
+            case "d":
+                runSourceDest(Bus,"",dest);
+                break;
+            case "sd":
+                return runSourceDest(Bus,source,dest);
                 break;
             default:
-                // code block
+                System.out.println("WRONG COMMAND IN getSD");
         }
     }
 
