@@ -8,6 +8,7 @@ body{
 
 .header h1{
     font-family: "Signika";
+    color: white;
 }
 
 .sidebar{   
@@ -73,10 +74,12 @@ a:hover {
 }
 
 header{
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     text-align: end;
     height: 40px;
     padding: 20px;
+    margin: 0px;
 
     #createButton{
         color: #ffffff;
@@ -87,7 +90,6 @@ header{
         border: none;
     }
 }
-
 
 
 .busDetails{
@@ -111,7 +113,14 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
     align-items: center;
     padding: 10px;
 }
-
+.scrollingEffect{
+    border-collapse: collapse;
+    text-align: left;
+    padding: 20px;
+    margin: 0 auto;
+    width: 95%;
+    overflow: auto;
+}
 
 table {
     border-collapse: collapse;
@@ -119,8 +128,7 @@ table {
     padding: 20px;
     margin: 0 auto;
     width: 95%;
-    overflow: auto;
-        
+  
     }
     th::before {
         content: "";
@@ -146,7 +154,7 @@ table {
 
 .mid{
     position: relative;
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 175px);
     margin: 20px;
     text-align: center;
     border: 2px;
@@ -195,3 +203,11 @@ h1{
     bottom: 10px;
 }
 
+#seatBookForm{
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0px 20px 0px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: auto;
+}
