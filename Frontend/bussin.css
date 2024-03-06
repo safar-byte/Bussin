@@ -6,6 +6,10 @@ body{
     width: 100%;
     }
 
+.header h1{
+    font-family: "Signika";
+}
+
 .sidebar{   
     display: inline-block;
     background: #0C356A;
@@ -69,6 +73,7 @@ a:hover {
 }
 
 header{
+    display: inline-block;
     text-align: end;
     height: 40px;
     padding: 20px;
