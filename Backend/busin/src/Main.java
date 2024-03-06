@@ -19,12 +19,14 @@ public class Main {
         String dest="";
         String source="";
         SourceDest SD=new SourceDest();
-        ArrayList<Bus> Bus1 = SD.runSourceDest(Bus, "TVM", "CAL", "s");
+        ArrayList<Bus> Bus1 = SD.runSourceDest(Bus, "TRV", "CAL", "s");
+
         for(Bus heybus:Bus1)
         {
             System.out.println(heybus.getBusName()+heybus.getBusSource());
         }
-        // csvwrite(SD.getSources(),sources,"filterBySource.csv");
+        CSVWriter CSW=new CSVWriter();
+        CSW.CSVWriterFilter(Bus1,"filterBySource.csv");
         // csvwrite(SD.getDests(),dests,"filterByDestination.csv");
         // csvwrite(SD.getSourcedest(),sourcdest,"filterBySourceDest.csv");
 
