@@ -1,19 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     var createButton = document.getElementById("createButton");
     var createForm = document.getElementById("createForm");
-    var midDiv = document.querySelector(".mid"); 
+    var midDiv = document.querySelector(".mid");
 
-    createButton.addEventListener("click", function () {
+    createButton.addEventListener("click", function() {
         toggleCreateForm();
     });
 
     function toggleCreateForm() {
+        // Toggle form visibility
         if (createForm.style.display === "none" || createForm.style.display === "") {
             createForm.style.display = "block";
-            midDiv.style.marginTop = "20px"; 
+            adjustMidDivHeight(true); 
         } else {
             createForm.style.display = "none";
-            midDiv.style.marginTop = "0"; 
+            adjustMidDivHeight(false); 
         }
+    }
+
+    function adjustMidDivHeight(isFormVisible) {
+
+        if(isFormVisible){ midDiv.style.minHeight = `calc(100vh - 332px)`;}
+        else{
+            midDiv.style.minHeight = `calc(100vh - 170px)`
+        }
+       
     }
 });
