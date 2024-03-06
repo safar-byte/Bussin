@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="bussin.css" />
-    
-</head>
+  </head>
 
   <body>
     <div class="sidebar">
@@ -18,31 +17,78 @@
       <header>
         <button type="button" id="createButton">+ Create New</button>
       </header>
-      <div id="createForm" style="display: none;">
-        <form id="form">`
+      <div id="createForm" style="display: none">
+        <h1>Enter Bus Details:</h1>
+        <br />
+        <form id="form">
+          `
           <div class="busDetails">
-            <label for="name">Bus Name:
-          <input type="text" name="busName" id="busName" required/></label>
-          <label for="type">
-            Bus Type:
-            <input list="bustype" name="type" id="busType" required />
-            <datalist id="bustype">
-              <option value="SuperFast"></option>
-              <option value="Fast Passenger"></option>
-              <option value="Ordinary"></option>
-            </datalist>
-          </label>
+            <label for="name"
+              >Bus Name:
+              <input type="text" name="busName" id="busName" required
+            /></label>
+            <label for="type">
+              Bus Type:
+              <input list="bustype" name="type" id="busType" required />
+              <datalist id="bustype">
+                <option value="SuperFast"></option>
+                <option value="Fast Passenger"></option>
+                <option value="Ordinary"></option>
+              </datalist>
+            </label>
+            <label for="seatCount"
+              >Seat Count:
+              <input type="number" name="seatCount" id="seatCount" required
+            /></label>
           </div>
           <div class="travelDetails">
-            <label for="source">Source: 
-          <input type="text" name="source" id="source" required /></label>
-          <label for="destination">Destination:
-          <input type="text" name="destination" id="destination" required/> </label>
-          <label for="time">Departure Time: 
-          <input type="time" name="time" id="time" required></label>
-          </div>        
+            <label for="source"
+              >Source:
+              <input list="sourceplace" name="source" id="sourcePlace" required />
+              <datalist id="sourceplace">
+                <option value="Thiruvananthapuram"></option>
+                <option value="Kollam"></option>
+                <option value="Alappuzha"></option>
+                <option value="Pathanamthitta"></option>
+                <option value="Kottayam"></option>
+                <option value="Idukki"></option>
+                <option value="Ernakulam"></option>
+                <option value="Thrissur"></option>
+                <option value="Palakkad"></option>
+                <option value="Malappuram"></option>
+                <option value="Kozhikode"></option>
+                <option value="Wayanad"></option>
+                <option value="Kannur"></option>
+                <option value="Kasaragod"></option>
+              </datalist>
+            </label>
+            <label for="destination"
+              >Destination:
+              <input list="destnationplace" name="dest" id="destinationPlace" required />
+              <datalist id="sourceplace">
+                <option value="Thiruvananthapuram"></option>
+                <option value="Kollam"></option>
+                <option value="Alappuzha"></option>
+                <option value="Pathanamthitta"></option>
+                <option value="Kottayam"></option>
+                <option value="Idukki"></option>
+                <option value="Ernakulam"></option>
+                <option value="Thrissur"></option>
+                <option value="Palakkad"></option>
+                <option value="Malappuram"></option>
+                <option value="Kozhikode"></option>
+                <option value="Wayanad"></option>
+                <option value="Kannur"></option>
+                <option value="Kasaragod"></option>
+              </datalist>            
+            </label>
+            <label for="time"
+              >Departure Time:
+              <input type="time" name="time" id="time" required
+            /></label>
+          </div>
           <div class="submitBtnDiv">
-            <input type="submit" value="Submit" id="submitBtn">
+            <input type="submit" value="Submit" id="submitBtn" />
           </div>
         </form>
       </div>
@@ -55,6 +101,7 @@
               <th>Source</th>
               <th>Destination</th>
               <th>Departure</th>
+              <th>Total Seats</th>
             </tr>
           </thead>
           <tbody id="entries"></tbody>

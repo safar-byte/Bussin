@@ -1,14 +1,14 @@
 body{
     margin: 0;
     padding: 0;
-    background: #dedede;
+    background: #68ebff;
     height: 100%;
     width: 100%;
     }
 
 .sidebar{   
     display: inline-block;
-    background: #0a2844;
+    background: #0C356A;
     height: 100vh;
     width: 300px;
     border-radius: 10px;
@@ -38,7 +38,7 @@ body{
     height: 100vh;
     width: calc(100% - 300px);
 }
-/* .sidebar ul li {
+.sidebar ul li {
     color: #7b91a8;
     width: auto; 
     height: 30px; 
@@ -46,10 +46,10 @@ body{
     list-style-type: none;
     text-align: left; 
     margin: 0px 20px 0px 20px;  
-} */
-/* .sidebar ul {
+}
+.sidebar ul {
     padding-left: 10px; 
-} */
+}
 
 header{
     text-align: end;
@@ -58,10 +58,10 @@ header{
 
     #createButton{
         color: #ffffff;
-        background: blue;
+        background: #425151;
         border-radius: 5px;
         height: 30px;
-        width: 10%;
+        width: 100px;
         border: none;
     }
 }
@@ -74,15 +74,9 @@ header{
     margin-bottom: 10px;
 }
 
-input[type="text"],#busType{
-    width: 250px;
+input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
+    width: 200px;
     height: 20px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px black;
-    border: 0;
-}
-
-#time{
     border-radius: 4px;
     box-shadow: 0px 0px 4px black;
     border: 0;
@@ -103,6 +97,7 @@ table {
     padding: 20px;
     margin: 0 auto;
     width: 95%;
+    overflow: auto;
         
     }
     th::before {
@@ -114,15 +109,7 @@ table {
         width: 0.5px; 
         background-color: black; 
     }
-    #StatusButton{
-        border-radius: 50px;
-        height: 25px;
-        width: 100px;
-        font-size: 13px;
-        background: #ffd9c3;
-        color: #c1896c;
-        border:2px solid #ddb49c;
-    }
+    
     td,th{
         border-bottom: 1px solid black;
         height: 25px;
@@ -156,29 +143,33 @@ table {
     margin: 0px 20px 0px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: auto;
+}
+
+h1{
+    margin: 0px;
 }
 .submitBtnDiv{
     display: flex;
     justify-content: center;
 
 }
-.submitBtnDiv input[type="submit"]{
+.submitBtnDiv input[type="submit"],#exportButton{
     background-color: #633eea;
     color: white;
     width: 125px;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .submitBtnDiv input[type="submit"]:hover{
     background-color: darkgrey;
     transition: .3s ease;
 }
-#exportButton {
+
+#exportButton{
     position: absolute;
+    left: 45%;
     bottom: 10px;
-    left: 50%;
 }
-
-
 
