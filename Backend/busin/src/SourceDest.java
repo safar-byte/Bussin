@@ -9,8 +9,17 @@ public class SourceDest {
     ArrayList<Bus> dests=new ArrayList<>();
     ArrayList<Bus> sourcedest=new ArrayList<>();
 
-    public ArrayList<Bus> getSources() {
-        return sources;
+    public ArrayList<Bus> getSD(ArrayList<Bus> Bus,String source,String dest,String reqd) {
+        switch(reqd) {
+            case "s":
+                runSourceDest(Bus,source,"");
+                break;
+            case y:
+                // code block
+                break;
+            default:
+                // code block
+        }
     }
 
     public ArrayList<Bus> getDests() {

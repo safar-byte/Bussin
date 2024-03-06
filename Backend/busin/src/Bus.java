@@ -12,7 +12,6 @@ public class Bus{
         this.busType = busType;
         this.busSource = busSource;
         this.busDestination = busDestination;
-        this.busArrival = busArrival;
         this.busDepature = busDepature;
     }
 
@@ -48,13 +47,9 @@ public class Bus{
         this.busDestination = busDestination;
     }
 
-    public String getBusArrival() {
-        return busArrival;
-    }
 
-    public void setBusArrival(String busArrival) {
-        this.busArrival = busArrival;
-    }
+
+
 
     public String getBusDepature() {
         return busDepature;
