@@ -3,16 +3,15 @@ public class Bus{
     private String busType;
     private String busSource;
     private String busDestination;
-    private String busArrival;
-    private String busDepature;
+    private String busDeparture;
 
 
-    public Bus(String busName, String busType, String busSource, String busDestination, String busArrival, String busDepature) {
+    public Bus(String busName, String busType, String busSource, String busDestination,  String busDeparture) {
         this.busName = busName;
         this.busType = busType;
         this.busSource = busSource;
         this.busDestination = busDestination;
-        this.busDepature = busDepature;
+        this.busDeparture = busDeparture;
     }
 
     public String getBusName() {
@@ -51,11 +50,11 @@ public class Bus{
 
 
 
-    public String getBusDepature() {
-        return busDepature;
+    public String getBusDeparture() {
+        return busDeparture;
     }
 
-    public void setBusDepature(String busDepature) {
-        this.busDepature = busDepature;
+    public void setBusDeparture(String busDeparture) {
+        this.busDeparture = busDeparture;
     }
 }
