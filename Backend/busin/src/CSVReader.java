@@ -12,8 +12,8 @@ public class CSVReader {
         ArrayList<Bus> bus=new ArrayList<>();
         FileReader f = new FileReader(filesrc);
         BufferedReader br = new BufferedReader(f);
-        String s;
-        while ((s = br.readLine()) != null) {
+        String s=br.readLine(); //skipping the heading
+        while (( s=br.readLine()) != null) {
             try {
                 String[] values = s.split(",");
                 if (values.length != 5) {
