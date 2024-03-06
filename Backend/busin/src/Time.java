@@ -6,22 +6,24 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Time {
-    public ArrayList<Bus> Filter(ArrayList<Bus> bustime, String busArrival,String busDeparture ) {
+    public ArrayList<Bus> Filter(ArrayList<Bus> bustime,String STRtime,String ENDtime) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
-        LocalTime StartTime = LocalTime.parse(busArrival,formatter);
-        LocalTime endTime = LocalTime.parse(busDeparture,formatter);
-        LocalTime time =LocalTime.parse("HH:mm",formatter);
+        LocalTime StartTime = LocalTime.parse(STRtime,formatter);
+        LocalTime endTime = LocalTime.parse(ENDtime,formatter);
 
-        ArrayList<Bus> timeShedule = new ArrayList<>();
+
+        ArrayList<Bus>timeShedule = new ArrayList<>();
         for (Bus bus :bustime){
-            LocalTime arrive = LocalTime.parse(bus.getBusArrival() ,formatter);
-            LocalTime depature = LocalTime.parse(bus.getBusDepature() ,formatter);
-            if (arrive.isAfter(StartTime) && depature.isBefore(endTime)){
+            LocalTime depature = LocalTime.parse(bus.getBusDeparture() ,formatter);
+            if (depature.isAfter(StartTime) && depature.isBefore(endTime)){
                 timeShedule.add(bus);
             }
 
         }
-        for(Bus hi:timeShedule) System.out.println(hi.getBusDepature()+hi.getBusName());
+        for(Bus bus:timeShedule) {
+            System.out.println(bus.getBusName()+"," +bus.getBusType()+"," + bus.getBusSource()+"," +bus.getBusDestination()+","+ bus.getBusDeparture());
+
+        }
         System.out.println("FILE SCHEDULE CREATED SUCCESSFULLY");
         return timeShedule;
 
