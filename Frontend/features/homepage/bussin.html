@@ -4,24 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="bussin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../common/bussin.css" />
   </head>
 
   <body>
     <div class="sidebar">
       <div class="sidebarLogo">
-        <img src="./assets/busin.jpeg" alt="Logo" />
+        <img src="../../assets/busin.jpeg" alt="Logo" />
+      </div>
+      <div class="sidebarContent">
+        <a href="bussin.html"><div class="redirect">Home</div></a>
+        <a href="../buscount/busCount.html"><div class="redirect">Bus Count</div></a>
+        <a href="../seatbooking/seatBooking.html"><div class="redirect">Seat Booking</div></a>
+        <a href="../sourcedestinationfilter/sourceDest.html"><div class="redirect">Bus Availability</div></a>
+        <a href=""><div class="redirect">Bus Timing Range</div></a>
       </div>
     </div>
     <div class="main">
       <header>
+        <h1 style="color: white">BUSSIN.com</h1>
         <button type="button" id="createButton">+ Create New</button>
       </header>
       <div id="createForm" style="display: none">
         <h1>Enter Bus Details:</h1>
         <br />
         <form id="form">
-          `
           <div class="busDetails">
             <label for="name"
               >Bus Name:
@@ -32,7 +45,7 @@
               <input list="bustype" name="type" id="busType" required />
               <datalist id="bustype">
                 <option value="SuperFast"></option>
-                <option value="Fast Passenger"></option>
+                <option value="FastPassenger"></option>
                 <option value="Ordinary"></option>
               </datalist>
             </label>
@@ -44,7 +57,12 @@
           <div class="travelDetails">
             <label for="source"
               >Source:
-              <input list="sourceplace" name="source" id="sourcePlace" required />
+              <input
+                list="sourceplace"
+                name="source"
+                id="sourcePlace"
+                required
+              />
               <datalist id="sourceplace">
                 <option value="Thiruvananthapuram"></option>
                 <option value="Kollam"></option>
@@ -64,8 +82,13 @@
             </label>
             <label for="destination"
               >Destination:
-              <input list="destnationplace" name="dest" id="destinationPlace" required />
-              <datalist id="sourceplace">
+              <input
+                list="destnationplace"
+                name="dest"
+                id="destinationPlace"
+                required
+              />
+              <datalist id="destnationplace">
                 <option value="Thiruvananthapuram"></option>
                 <option value="Kollam"></option>
                 <option value="Alappuzha"></option>
@@ -80,7 +103,7 @@
                 <option value="Wayanad"></option>
                 <option value="Kannur"></option>
                 <option value="Kasaragod"></option>
-              </datalist>            
+              </datalist>
             </label>
             <label for="time"
               >Departure Time:
@@ -93,25 +116,26 @@
         </form>
       </div>
       <div class="mid">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Source</th>
-              <th>Destination</th>
-              <th>Departure</th>
-              <th>Total Seats</th>
-            </tr>
-          </thead>
-          <tbody id="entries"></tbody>
-        </table>
+        <div class="srollingEffect">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Departure</th>
+                <th>Total Seats</th>
+              </tr>
+            </thead>
+            <tbody id="entries"></tbody>
+          </table>
+        </div>
         <button type="button" id="exportButton">Export</button>
       </div>
     </div>
     <script src="createForm.js"></script>
-    <script src="formTable.js"></script>
-    <script src="index.js"></script>
-    <script src="export.js"></script>
+    <script src="../../common/formTable.js"></script>
+    <script src="../../common/export.js"></script>
   </body>
 </html>

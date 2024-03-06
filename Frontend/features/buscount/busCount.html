@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../common/bussin.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebarLogo">
+            <img src="../../assets/busin.jpeg" alt="Logo" />
+        </div>
+        <div class=sidebarContent>
+                <a href="../homepage/bussin.html"><div class="redirect">Home</div></a>
+                <a href="busCount.html"><div class="redirect">Bus Count</div></a>
+                <a href="../seatbooking/seatBooking.html"><div class="redirect">Seat Booking</div></a>
+                <a href="../sourcedestinationfilter/sourceDest.html"><div class="redirect">Bus Availability</div></a>
+                <a href=""><div class="redirect">Bus Timing Range</div></a>
+        </div>
+    </div>
+    <div class="main">
+        <header>
+            <h1 style="color: white">BUSSIN.com</h1>
+        </header>
+        <div class="mid">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bus Type</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody id="entries"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="readCount.js"></script>
+</body>
+
+</html>

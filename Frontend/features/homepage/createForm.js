@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function toggleCreateForm() {
-        // Toggle form visibility
         if (createForm.style.display === "none" || createForm.style.display === "") {
             createForm.style.display = "block";
             adjustMidDivHeight(true); 
@@ -20,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function adjustMidDivHeight(isFormVisible) {
 
-        if(isFormVisible){ midDiv.style.minHeight = `calc(100vh - 370px)`;}
+        if(isFormVisible){ midDiv.style.minHeight = `calc(100vh - 375px)`;}
         else{
-            midDiv.style.minHeight = `calc(100vh - 170px)`
+            midDiv.style.minHeight = `calc(100vh - 175px)`
         }
        
     }
