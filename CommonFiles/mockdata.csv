@@ -1,4 +1,4 @@
-bus_name,bus_type,source,dest,departure
+Bus_name,Bus_type,Source,Destination,Departure
 KSRTC,SUPERFAST,KAZ,KLM,08:00
 KSRTC,CITYFAST,EF,VLN,09:30
 TNSRTC,INTERSTATE,T,CHN,10:45
