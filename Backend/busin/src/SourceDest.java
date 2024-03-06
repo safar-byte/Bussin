@@ -15,9 +15,10 @@ public class SourceDest {
             switch (reqd) {
                 case "s": {
 
-                    if (bus.getBusSource().equals(src))
+                    if (bus.getBusSource().equals(src)) {
                         reqdList.add(bus);
                     }
+                }
 
 
 
@@ -36,7 +37,7 @@ public class SourceDest {
 
             }
         }
-
+    System.out.println("success");
     return reqdList;
     }
 }
