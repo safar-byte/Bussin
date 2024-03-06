@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function toggleCreateForm() {
-        // Toggle form visibility
         if (createForm.style.display === "none" || createForm.style.display === "") {
             createForm.style.display = "block";
             adjustMidDivHeight(true); 

@@ -11,7 +11,8 @@ function exportToJsonFile() {
             type: row.cells[1].innerText,
             source: row.cells[2].innerText,
             destination: row.cells[3].innerText,
-            departure: row.cells[4].innerText
+            departure: row.cells[4].innerText,
+            seatCount: row.cells[5].innerText
         };
         dataArray.push(rowData);
     }
