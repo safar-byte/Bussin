@@ -25,47 +25,19 @@
     <div class="main">
         <header>
         </header>
-        <div id="createForm" style="display: none;">
-            <form id="form">`
-                <div class="busDetails">
-                    <label for="name">Bus Name:
-                        <input type="text" name="busName" id="busName" required /></label>
-                    <label for="type">
-                        Bus Type:
-                        <input list="bustype" name="type" id="busType" required />
-                        <datalist id="bustype">
-                            <option value="SuperFast"></option>
-                            <option value="Fast Passenger"></option>
-                            <option value="Ordinary"></option>
-                        </datalist>
-                    </label>
-                </div>
-                <div class="travelDetails">
-                    <label for="source">Source:
-                        <input type="text" name="source" id="source" required /></label>
-                    <label for="destination">Destination:
-                        <input type="text" name="destination" id="destination" required /> </label>
-                    <label for="time">Departure Time:
-                        <input type="time" name="time" id="time" required></label>
-                </div>
-                <div class="submitBtnDiv">
-                    <input type="submit" value="Submit" id="submitBtn">
-                </div>
-            </form>
-        </div>
         <div class="mid">
             <table>
                 <thead>
                     <tr>
                         <th>Bus Type</th>
                         <th>Count</th>
-
                     </tr>
                 </thead>
                 <tbody id="entries"></tbody>
             </table>
         </div>
     </div>
+    <script src="readCount.js"></script>
 </body>
 
 </html>
