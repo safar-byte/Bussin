@@ -4,11 +4,7 @@ body{
     background: #68ebff;
     height: 100%;
     width: 100%;
-    }
-
-/* .header h1{
-    font-family: "Signika";
-} */
+}
 
 .sidebar{   
     display: inline-block;
@@ -78,16 +74,6 @@ header{
     color: white;    
 }
 
-#sourcePlace,#destinationPlace{
-    width: 200px;
-    height: 20px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px black;
-    border: 0;
-}
-
-
-
 table {
     border-collapse: collapse;
     text-align: left;
@@ -121,7 +107,7 @@ table {
 
 .mid{
     position: relative;
-    min-height: calc(100vh - 328px);
+    min-height: calc(100vh - 330px);
     margin: 20px;
     text-align: center;
     border: 2px;
@@ -129,9 +115,15 @@ table {
     box-shadow: 0px 0px 5px #998787;
     display: block;
     background: white;
-    overflow: auto;
     padding-bottom: 50px;
+}
 
+.scrollingEffect{
+    text-align: left;
+    padding: 20px;
+    margin: 0px;
+    overflow-y: auto;
+    max-height: 325px;
 }
 
 #seatBookingForm {
