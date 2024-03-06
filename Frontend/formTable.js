@@ -8,8 +8,8 @@ let charSet = new Set();
 function addData() {
     let busName = document.getElementById("busName").value;
     let busType = document.getElementById("busType").value;
-    let source = document.getElementById("source").value;
-    let destination = document.getElementById("destination").value;
+    let source = document.getElementById("sourcePlace").value;
+    let destination = document.getElementById("destinationPlace").value;
     let time = document.getElementById("time").value;
     let seatCount = document.getElementById("seatCount").value;
     let tablerow = document.getElementById("entries");
@@ -53,6 +53,9 @@ function addData() {
         cell4.innerHTML = destination;
         cell5.innerHTML = time;
         cell6.innerHTML = seatCount;
+      }
+      else{
+        window.alert('Bus name already exists!!')
       }
 
       document.getElementById("form").reset();
