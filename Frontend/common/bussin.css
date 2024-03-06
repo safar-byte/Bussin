@@ -6,11 +6,6 @@ body{
     width: 100%;
     }
 
-.header h1{
-    font-family: "Signika";
-    color: white;
-}
-
 .sidebar{   
     display: inline-block;
     background: #0C356A;
@@ -190,11 +185,12 @@ h1{
     width: 125px;
     height: 30px;
     border-radius: 5px;
+    transition: .3s ease;
+
 }
 
 .submitBtnDiv input[type="submit"]:hover{
-    background-color: darkgrey;
-    transition: .3s ease;
+    background-color: #5224a5;
 }
 
 #exportButton{
