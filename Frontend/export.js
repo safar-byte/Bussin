@@ -19,11 +19,35 @@ function exportToJsonFile() {
     let json = JSON.stringify(dataArray, null, 4);
 
     let blob = new Blob([json], {type: "application/json"});
+    // let isblob = blob instanceof Blob
 
     let url = URL.createObjectURL(blob);
     let a = document.createElement("a");
-    a.download = "bus-data.json";
-    a.href = url;
-    a.textContent = "Download bus-data.json";
-    a.click();
+
+
+    /////////////// null finder //////////////////
+    const reader = new FileReader();
+    reader.addEventListener('loadend' , () => {
+        const arrayBuffer = reader.result
+        console.log(arrayBuffer)
+        console.log(blob.size)
+    });
+
+    reader.readAsArrayBuffer(blob)
+
+    if(blob.size == 2){
+        window.alert("no data to export")
+    }else{
+        window.alert("data exported")
+        a.download = "bus-data.json";
+        a.href = url;
+        a.textContent = "Download bus-data.json";
+        a.click();
+    }
+
+    ////////////////////////////////////////////////
+
+    
+
+    
 }
