@@ -1,6 +1,3 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -8,8 +5,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String filesrc = "C:\\Users\\dell\\IdeaProjects\\Bussin\\CommonFiles\\mockdata.csv";
-
+        String filesrc = "C:\\Users\\dell\\IdeaProjects\\Bussin\\CommonFiles\\bus-data.csv";
+        String filecsv="C:\\Users\\dell\\IdeaProjects\\Bussin\\CommonFiles\\";
 
         //  This part of code is for creating an Arraylist for CSV file elements
        ArrayList<Bus> Bus;
@@ -21,21 +18,16 @@ public class Main {
         SourceDest SD=new SourceDest();
         ArrayList<Bus> Bus1 = SD.runSourceDest(Bus, "TRV", "CAL", "s");
 
-        for(Bus heybus:Bus1)
-        {
-            System.out.println(heybus.getBusName()+heybus.getBusSource());
-        }
         CSVWriter CSW=new CSVWriter();
-        CSW.CSVWriterFilter(Bus1,"filterBySource.csv");
-        // csvwrite(SD.getDests(),dests,"filterByDestination.csv");
-        // csvwrite(SD.getSourcedest(),sourcdest,"filterBySourceDest.csv");
+        CSW.CSVWriterFilter(Bus1,filecsv+"filterBySource.csv");
+
 
         // This part of code is for Time range filtering
-        String filenameTime="filterByTime.csv";
-        String arrival="";
-        String departure="";
+        //String filenameTime="filterByTime.csv";
+        //String arrival="17:50";
+        //String departure="20:00";
         //Time T=new Time();
-        //csvwrite(T.Filter(Bus,arrival,departure);
+        //CSW.CSVWriterFilter(T.Filter(Bus,arrival,departure),filecsv+"TimeRangeFilter.csv");
 
 
         //This part of code is for Type count and filtering
