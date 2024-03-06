@@ -54,6 +54,9 @@ function addData() {
         cell5.innerHTML = time;
         cell6.innerHTML = seatCount;
       }
+      else{
+        window.alert('Bus name already exists!!')
+      }
 
       document.getElementById("form").reset();
     }
