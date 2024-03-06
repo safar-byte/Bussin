@@ -1,3 +1,4 @@
+Bus_name,Bus_type,Source,Destination,Departure,SeatCount
 KSRTC,SUPERFAST,KAZ,KLM,08:00,50
 KSRTC,CITYFAST,EF,VLN,09:30,40
 TNSRTC,INTERSTATE,T,CHN,10:45,30
