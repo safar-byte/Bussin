@@ -40,7 +40,7 @@ public class CSVReader {
                 if (joinigdate.isEmpty()) {
                     throw new Exception("Employee joining date not found");
                 }
-                bus.add(new Bus(values[0], values[1], values[2], values[3], values[4], values[5]));
+                bus.add(new Bus(values[0], values[1], values[2], values[3], values[4],value));
             }catch (Exception e){
                 System.out.println(e.getMessage());
                 System.exit(0);
