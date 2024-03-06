@@ -44,7 +44,7 @@ public class CSVReader {
                 if (seatCount.isEmpty()) {
                     throw new Exception("Seat Count not found");
                 }
-                bus.add(new Bus(values[0], values[1], values[2], values[3], values[4], values[5]));
+                bus.add(new Bus(values[0].replaceAll("^\"|\"$", ""), values[1].replaceAll("^\"|\"$", ""), values[2].replaceAll("^\"|\"$", ""), values[3].replaceAll("^\"|\"$", ""), values[4].replaceAll("^\"|\"$", ""), values[5].replaceAll("^\"|\"$", "")));
             }catch (Exception e){
                 System.out.println(e.getMessage());
                 System.exit(0);
