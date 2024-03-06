@@ -8,7 +8,7 @@ public class CSVReader {
 
 
 
-    public static ArrayList<Bus> getvalue(String filesrc) throws IOException {
+    public  ArrayList<Bus> getvalue(String filesrc) throws IOException {
 
         ArrayList<Bus> bus=new ArrayList<>();
         FileReader f = new FileReader(filesrc);
@@ -55,6 +55,37 @@ public class CSVReader {
         //for(Bus hi:bus) System.out.println(hi.getBusDepature()+hi.getBusDestination()+hi.getBusSource()+hi.getBusType()+hi.getBusArrival()+hi.getBusName());
         return bus;
     }
+    public  ArrayList<Reserve> getReserveValue(String filesrc) throws IOException {
 
+        ArrayList<Reserve> reserves=new ArrayList<>();
+        FileReader f = new FileReader(filesrc);
+        BufferedReader br = new BufferedReader(f);
+        String s = br.readLine(); //skip first line
+        while ((s = br.readLine()) != null) {
+            try {
+                String[] values = s.split(",");
+                if (values.length != 2) {
+                    throw new Exception("Invalid cvs file");
+                }
+                String busName = values[0].trim();
+                String busAction = values[1].trim();
+
+                if (busName.isEmpty()) {
+                    throw new Exception("Bus name not found");
+                }
+                if (busAction.isEmpty()) {
+                    throw new Exception("Bus Action not found");
+                }
+                reserves.add(new Reserve(values[0].replaceAll("^\"|\"$", ""), values[1].replaceAll("^\"|\"$", "")));
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+                System.exit(0);
+
+            }
+        }
+        System.out.println("FILE READ SUCCESSFULLY");
+        //for(Bus hi:bus) System.out.println(hi.getBusDepature()+hi.getBusDestination()+hi.getBusSource()+hi.getBusType()+hi.getBusArrival()+hi.getBusName());
+        return reserves;
+    }
 
 }

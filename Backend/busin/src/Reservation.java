@@ -21,17 +21,17 @@ public class Reservation {
                         {
                             if(newbus.getBusName().equals(varRes.getBusName()))
                             {
-                                newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt())+1));
+                                newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt())-1));
                             }
                         }
                     }
-                    if(varRes.getAction().equals("Cancel"))
+                    if(varRes.getAction().equals("Leave"))
                     {
                         for(Bus newbus:bus)
                         {
                             if(newbus.getBusName().equals(varRes.getBusName()))
                             {
-                                newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt())-1));
+                                newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt())+1));
                             }
                         }
                     }
