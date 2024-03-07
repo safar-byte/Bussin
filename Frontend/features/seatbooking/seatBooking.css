@@ -26,28 +26,31 @@ body{
     border-radius: 50%;
 }
 a:link{
-    color: White;
     text-decoration: none;
 }
+
 a:hover {
     color: red;
     background-color: transparent;
     text-decoration: none;
 }
-.activePage{
+
+#activePage{
     color: beige;
 }
-.redirect{
+
+.seatBookingRedirect,.homeRedirect,.busCountRedirect,.busAvailabilityRedirect,.busTimingRedirect{
+    padding: 10px;
     display: flex;
-    height: 45px;
-    justify-content: center;
-    background-color: #68ebff ;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 8px;
+    background-color: #68ebff;
     margin: 8px;
+    border-radius: 5px;
+    height: 30px;
 }
 .sidebarContent{
-    width: auto;
+    /* width: auto; */
     padding: 10px 20px 0px 20px;
     height: calc(100vh - 350px);
     
