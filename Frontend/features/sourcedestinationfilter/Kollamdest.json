@@ -6,5 +6,37 @@
     "Destination": "Kollam",
     "Departure": "14:25",
     "SeatCount": 30
+  },
+  {
+    "Bus_name": "KSRTC10",
+    "Bus_type": "FastPassenger",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "20:50",
+    "SeatCount": 50
+  },
+  {
+    "Bus_name": "KSRTC12",
+    "Bus_type": "SuperFast",
+    "Source": "Wayanad",
+    "Destination": "Kollam",
+    "Departure": "02:43",
+    "SeatCount": 52
+  },
+  {
+    "Bus_name": "KSRTC13",
+    "Bus_type": "Ordinary",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "22:05",
+    "SeatCount": 45
+  },
+  {
+    "Bus_name": "KSRTC19",
+    "Bus_type": "FastPassenger",
+    "Source": "Malappuram",
+    "Destination": "Kollam",
+    "Departure": "08:55",
+    "SeatCount": 52
   }
 ]

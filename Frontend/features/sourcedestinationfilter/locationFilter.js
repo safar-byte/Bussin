@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 let tablerow = document.getElementById("entries");
-// var oldTable = entries.innerHTML;
-
 
 
 function showData(ev){
@@ -32,7 +30,6 @@ function showData(ev){
     .then(response => response.json())
     .then(datas => datas.forEach(data => {
         
-
         let row = tablerow.insertRow(-1);
         row.insertCell(0).innerHTML = data.Bus_name;
         row.insertCell(1).innerHTML = data.Bus_type;
@@ -42,4 +39,11 @@ function showData(ev){
         row.insertCell(5).innerHTML = data.SeatCount;
         
     }))
+    .catch(error => {
+        let row = tablerow.insertRow(0);
+        row.insertCell(0).innerHTML = "No Bus available";
+
+    });
+
+    
 }
