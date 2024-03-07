@@ -13,7 +13,20 @@ function showData(ev){
     
     let splace = document.getElementById("sourcePlace").value;
     let dplace = document.getElementById("destinationPlace").value;
-    let place = splace+dplace;
+    let place = ''
+
+
+    if(splace && dplace){
+        place = splace+dplace;
+    }
+    else if (splace == '' && dplace){
+        place = `${dplace}dest`
+    }
+    else if (splace && dplace == ''){
+        place = `${splace}source`
+    }
+    
+    console.log(`${place}`)
  
     fetch(`${place}.json`)
     .then(response => response.json())

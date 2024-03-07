@@ -1,0 +1,42 @@
+[
+  {
+    "Bus_name": "KSRTC01",
+    "Bus_type": "SuperFast",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "14:25",
+    "SeatCount": 30
+  },
+  {
+    "Bus_name": "KSRTC08",
+    "Bus_type": "Ordinary",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kottayam",
+    "Departure": "10:40",
+    "SeatCount": 35
+  },
+  {
+    "Bus_name": "KSRTC10",
+    "Bus_type": "FastPassenger",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "20:50",
+    "SeatCount": 50
+  },
+  {
+    "Bus_name": "KSRTC13",
+    "Bus_type": "Ordinary",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "22:05",
+    "SeatCount": 45
+  },
+  {
+    "Bus_name": "KSRTC14",
+    "Bus_type": "SuperFast",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Pathanamthitta",
+    "Departure": "16:30",
+    "SeatCount": 55
+  }
+]

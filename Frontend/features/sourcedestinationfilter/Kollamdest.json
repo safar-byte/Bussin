@@ -1,0 +1,10 @@
+[
+  {
+    "Bus_name": "KSRTC01",
+    "Bus_type": "SuperFast",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "14:25",
+    "SeatCount": 30
+  }
+]
