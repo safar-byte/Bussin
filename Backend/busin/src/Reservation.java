@@ -3,6 +3,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Reservation {
+    Integer cnc=0;
+    Integer resv=0;
 //    public void seatUpdater( ArrayList<Bus> bus ,ArrayList<Reserve> res) {
 //        Set<String> uniqBusSet = new HashSet<>();
 //        for (Reserve var : res) {
@@ -48,15 +50,23 @@ public class Reservation {
             if (varRes.getAction().equals("reserve")) {
                 for (Bus newbus : bus) {
                     if (newbus.getBusName().equals(varRes.getBusName())) {
+
+
+
                         newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) - 1));
                         if (Integer.parseInt(newbus.getSeatcnt()) >= 0) {
                             newbus.setReserve(newbus.getReserve() - 1);
 
                             System.out.println("SEAT RESERVED FOR  " + newbus.getBusName());
-                        } else {
-                            newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1));
+                            if(cnc==1)
+                            {
+                                cnc=0;
+                            }
 
-                            throw new Exception("SEATS ARE FULL AFTER" + newbus.getReserve());
+                        } else if(resv!=1) {
+                            newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1));
+                            resv=1;
+                            throw new Exception("SEATS ARE FULL AFTER" + newbus.getBusName()+"after"+newbus.getReserve());
 
 
                         }
@@ -67,13 +77,18 @@ public class Reservation {
                     for (Bus newbus : bus) {
                         if (newbus.getBusName().equals(varRes.getBusName())) {
                             newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1));
+
                             if (Integer.parseInt(newbus.getSeatcnt()) <=Integer.parseInt(newbus.getMaxCnt())) {
                                 newbus.setCancel(newbus.getCancel() + 1);
                                 System.out.println("SEAT Cancelled FOR  " + newbus.getBusName());
+                                if(resv==1)
+                                {
+                                    resv=0;
+                                }
 
-                            } else {
+                            } else if(cnc!=1) {
                                 newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) - 1));
-
+                                cnc=1;;
                                 throw new Exception("NO SEATS ARE RESERVED AFTER CANCEL " + newbus.getCancel());
 
 
