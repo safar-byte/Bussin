@@ -22,7 +22,7 @@ public class Bus{
         maxCnt=seatcnt;
 
     }
-//added
+//added again
     public String getMaxCnt() {
         return maxCnt;
     }
