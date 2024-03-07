@@ -58,18 +58,6 @@ a:hover {
     height: 100vh;
     width: calc(100% - 300px);
 }
-.sidebar ul li {
-    color: white;
-    width: auto; 
-    height: 30px; 
-    padding: 10px; 
-    list-style-type: none;
-    text-align: left; 
-    margin: 0px 20px 0px 20px;  
-}
-.sidebar ul {
-    padding-left: 10px; 
-}
 
 header{
     display: flex;
@@ -78,18 +66,17 @@ header{
     height: 40px;
     padding: 20px;
     margin: 0px;
-
-    #createButton{
-        color: #ffffff;
-        background: #633eea;
-        border-radius: 5px;
-        height: 30px;
-        width: 100px;
-        cursor: pointer;   
-        transition: .3s ease;     
-    }
 }
 
+#createButton{
+    color: #ffffff;
+    background: #633eea;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;   
+    transition: .3s ease;     
+}
 
 .busDetails{
     display: flex;
@@ -118,36 +105,6 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
     overflow-y: auto;
     height: calc(100vh - 230px);
 }
-
-/* table {
-    border-collapse: collapse;
-    text-align: left;
-    padding: 20px;
-    margin: 0 auto;
-    width: 95%;
-  
-    }
-    th::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 20%; 
-        bottom: 20%; 
-        width: 0.5px; 
-        background-color: black; 
-    }
-    
-    td,th{
-        border-bottom: 1px solid black;
-        height: 25px;
-        padding: 10px 10px 10px 20px;
-    }
-    th{
-        
-        position: relative;
-
- 
-} */
 
 table {
 	border-collapse: collapse;
