@@ -42,12 +42,12 @@
             /></label>
             <label for="type">
               Bus Type:
-              <input list="bustype" name="type" id="busType" required />
-              <datalist id="bustype">
-                <option value="SuperFast"></option>
-                <option value="FastPassenger"></option>
-                <option value="Ordinary"></option>
-              </datalist>
+              <select name="type" id="busType" required >
+                <option value="" selected disabled>Select the Bus Type</option>
+                <option value="SuperFast">SuperFast</option>
+                <option value="FastPassenger">FastPassenger</option>
+                <option value="Ordinary">Ordinary</option>
+              </select>
             </label>
             <label for="seatCount"
               >Seat Count:
@@ -55,55 +55,43 @@
             /></label>
           </div>
           <div class="travelDetails">
-            <label for="source"
-              >Source:
-              <input
-                list="sourceplace"
-                name="source"
-                id="sourcePlace"
-                required
-              />
-              <datalist id="sourceplace">
-                <option value="Thiruvananthapuram"></option>
-                <option value="Kollam"></option>
-                <option value="Alappuzha"></option>
-                <option value="Pathanamthitta"></option>
-                <option value="Kottayam"></option>
-                <option value="Idukki"></option>
-                <option value="Ernakulam"></option>
-                <option value="Thrissur"></option>
-                <option value="Palakkad"></option>
-                <option value="Malappuram"></option>
-                <option value="Kozhikode"></option>
-                <option value="Wayanad"></option>
-                <option value="Kannur"></option>
-                <option value="Kasaragod"></option>
-              </datalist>
-            </label>
-            <label for="destination"
-              >Destination:
-              <input
-                list="destnationplace"
-                name="dest"
-                id="destinationPlace"
-                required
-              />
-              <datalist id="destnationplace">
-                <option value="Thiruvananthapuram"></option>
-                <option value="Kollam"></option>
-                <option value="Alappuzha"></option>
-                <option value="Pathanamthitta"></option>
-                <option value="Kottayam"></option>
-                <option value="Idukki"></option>
-                <option value="Ernakulam"></option>
-                <option value="Thrissur"></option>
-                <option value="Palakkad"></option>
-                <option value="Malappuram"></option>
-                <option value="Kozhikode"></option>
-                <option value="Wayanad"></option>
-                <option value="Kannur"></option>
-                <option value="Kasaragod"></option>
-              </datalist>
+            <label for="source">Source:
+              <select name="source" id="sourcePlace" required >
+                <option value="" selected disabled>Select the Source</option>
+                  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                  <option value="Kollam">Kollam</option>
+                  <option value="Alappuzha">Alappuzha</option>
+                  <option value="Pathanamthitta">Pathanamthitta</option>
+                  <option value="Kottayam">Kottayam</option>
+                  <option value="Idukki">Idukki</option>
+                  <option value="Ernakulam">Ernakulam</option>
+                  <option value="Thrissur">Thrissur</option>
+                  <option value="Palakkad">Palakkad</option>
+                  <option value="Malappuram">Malappuram</option>
+                  <option value="Kozhikode">Kozhikode</option>
+                  <option value="Wayanad">Wayanad</option>
+                  <option value="Kannur">Kannur</option>
+                  <option value="Kasaragod">Kasaragod</option>
+              </select>
+              </label>
+            <label for="destination">Destination:
+              <select name="dest" id="destinationPlace" required>
+                <option value="" selected disabled>Select the Destination</option>
+                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                  <option value="Kollam">Kollam</option>
+                  <option value="Alappuzha">Alappuzha</option>
+                  <option value="Pathanamthitta">Pathanamthitta</option>
+                  <option value="Kottayam">Kottayam</option>
+                  <option value="Idukki">Idukki</option>
+                  <option value="Ernakulam">Ernakulam</option>
+                  <option value="Thrissur">Thrissur</option>
+                  <option value="Palakkad">Palakkad</option>
+                  <option value="Malappuram">Malappuram</option>
+                  <option value="Kozhikode">Kozhikode</option>
+                  <option value="Wayanad">Wayanad</option>
+                  <option value="Kannur">Kannur</option>
+                  <option value="Kasaragod">Kasaragod</option>
+              </select>
             </label>
             <label for="time"
               >Departure Time:

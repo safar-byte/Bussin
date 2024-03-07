@@ -60,12 +60,12 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
     padding: 20px;
     margin: 0px;
     overflow-y: auto;
-    height: calc(100vh - 230px);
+    height: calc(100vh - 211px);
 }
 
 .mid{
     position: relative;
-    min-height: calc(100vh - 175px);
+    height: calc(100vh - 151px);
     margin: 20px;
     text-align: center;
     border: 2px;
@@ -74,6 +74,7 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
     display: block;
     background: white;
     padding-bottom: 40px;
+    overflow: auto;
 
 }
 #createForm {

@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
     function adjustMidDivHeight(isFormVisible) {
 
         if(isFormVisible){ 
-            midDiv.style.height = `calc(100vh - 356px)`;
-            tableDiv.style.height =`calc(100vh - 408px)`;
+            midDiv.style.height = `calc(100vh - 330px)`;
+            tableDiv.style.height =`calc(100vh - 390px)`;
     }
         else{
-            midDiv.style.height = `calc(100vh - 175px)`;
-            tableDiv.style.height =`calc(100vh - 228px)`;
+            midDiv.style.height = `calc(100vh - 151px)`;
+            tableDiv.style.height =`calc(100vh - 211px)`;
 
         }
        

@@ -71,7 +71,7 @@ label{
 
 .mid{
     position: relative;
-    min-height: calc(100vh - 328px);
+    min-height: calc(100vh - 314px);
     margin: 20px;
     text-align: center;
     border: 2px;

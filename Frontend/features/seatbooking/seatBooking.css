@@ -28,7 +28,7 @@ header{
 
 .mid{
     position: relative;
-    min-height: calc(100vh - 342px);
+    min-height: calc(100vh - 343px);
     margin: 20px;
     text-align: center;
     border: 2px;

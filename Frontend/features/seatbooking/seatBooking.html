@@ -1,90 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Signika:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="seatBooking.css" />
-    <link rel="stylesheet" href="../../common/components.css" />
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Signika:wght@300..700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="seatBooking.css" />
+  <link rel="stylesheet" href="../../common/components.css" />
 
-  <body>
-    <div class="sidebar">
-      <div class="sidebarLogo">
-        <img src="../../assets/busin.jpeg" alt="Logo" />
-      </div>
-      <div class="sidebarContent">
-        <div class="homeRedirect"><a href="../homepage/bussin.html">Home</a></div>
-        <div class="busCountRedirect"><a href="../buscount/busCount.html">Bus Count</a></div>
-        <div class="seatBookingRedirect"><a href="seatBooking.html"><span id="activePage">Seat Booking</span></a></div>
-        <div class="busAvailabilityRedirect"><a href="../sourcedestinationfilter/sourceDest.html">Bus Availability</a></div>
-        <div class="busTimingRedirect"><a href="../bustiming/busTiming.html">Bus Timing Range</a></div>
-      </div>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="sidebarLogo">
+      <img src="../../assets/busin.jpeg" alt="Logo" />
     </div>
-    <div class="main">
-      <header>
-        <h1>BUSSIN.com</h1>
-      </header>
-      <div id="seatBookingForm">
-        <h2>Book Your Tickets!</h2>
-        <br />
-        <form id="form">
-          <div class="busDetails">
-            <div class="BusNameInputField">
-              <label for="busName"
-                ><b>Bus Name:</b>
-                <input type="text" name="busName" id="busName" required
-              /></label>
-            </div>
-            <div class="optionSelections">
-              <label for="optionSelection"
-                ><b>Select option:</b>
-                <input
-                  type="radio"
-                  name="optedValue"
-                  id="reserve"
-                  value="Reservation"
-                />
-                <label for="reserve">Reservation</label>
-                <input
-                  type="radio"
-                  name="optedValue"
-                  id="leave"
-                  value="Leave"
-                />
-                <label for="leave">Leave</label>
-              </label>
-            </div>
-
-            <div class="submitButton">
-              <input type="submit" value="Submit" id="submitBtn" />
-            </div>
+    <div class="sidebarContent">
+      <div class="homeRedirect"><a href="../homepage/bussin.html">Home</a></div>
+      <div class="busCountRedirect"><a href="../buscount/busCount.html">Bus Count</a></div>
+      <div class="seatBookingRedirect"><a href="seatBooking.html"><span id="activePage">Seat Booking</span></a></div>
+      <div class="busAvailabilityRedirect"><a href="../sourcedestinationfilter/sourceDest.html">Bus Availability</a>
+      </div>
+      <div class="busTimingRedirect"><a href="../bustiming/busTiming.html">Bus Timing Range</a></div>
+    </div>
+  </div>
+  <div class="main">
+    <header>
+      <h1>BUSSIN.com</h1>
+    </header>
+    <div id="seatBookingForm">
+      <h2>Book Your Tickets!</h2>
+      <br />
+      <form id="form">
+        <div class="busDetails">
+          <div class="BusNameInputField">
+            <label for="busName"><b>Bus Name:</b>
+              <input type="text" name="busName" id="busName" required /></label>
           </div>
-        </form>
-      </div>
-      <div class="mid">
-        <div class="scrollingEffect">
-          <table>
-            <thead>
-              <tr>
-                <th>Activity</th>
-                <th>BusName</th>
-              </tr>
-            </thead>
-            <tbody id="entries"></tbody>
-          </table>
+          <div class="optionSelections">
+            <label for="optionSelection"><b>Select option:</b>
+              <input type="radio" name="optedValue" id="reserve" value="Reservation" />
+              <label for="reserve">Reservation</label>
+              <input type="radio" name="optedValue" id="leave" value="Leave" />
+              <label for="leave">Leave</label>
+            </label>
+          </div>
+
+          <div class="submitButton">
+            <input type="submit" value="Submit" id="submitBtn" />
+          </div>
         </div>
-        <button type="button" id="exportButton">Export</button>
-      </div>
+      </form>
     </div>
-    <script src="exportSeatBooking.js"></script>
-    <script src="seatBooking.js"></script>
-  </body>
+    <div class="mid">
+      <div class="scrollingEffect">
+        <table>
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>BusName</th>
+            </tr>
+          </thead>
+          <tbody id="entries"></tbody>
+        </table>
+      </div>
+      <button type="button" id="exportButton">Export</button>
+    </div>
+  </div>
+  <script src="exportSeatBooking.js"></script>
+  <script src="seatBooking.js"></script>
+</body>
+
 </html>
