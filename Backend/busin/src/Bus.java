@@ -5,6 +5,7 @@ public class Bus{
     private String busDestination;
     private String busDeparture;
     private String seatcnt;
+    private String maxCnt;
     public String getSeatcnt() {
         return seatcnt;
     }
@@ -18,8 +19,14 @@ public class Bus{
         this.busDestination = busDestination;
         this.busDeparture = busDeparture;
         this.seatcnt=seatcnt;
+        maxCnt=seatcnt;
 
     }
+
+    public String getMaxCnt() {
+        return maxCnt;
+    }
+
     public String getBusName() {
         return busName;
     }
