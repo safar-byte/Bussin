@@ -6,14 +6,11 @@ let tablerow = document.getElementById("entries");
 
 
 function readFiles(ev){
+    tablerow.innerHTML = '';
 
-    
     ev.preventDefault();
-    // let file = document.getElementById("form").value;
    
-    var actionValue = form.querySelector('input[name="TimeSelect"]:checked').value;
-    let fileName = "MorningFilter"
-    console.log(actionValue)
+    let fileName = form.querySelector('input[name="TimeSelect"]:checked').value;
  
     fetch(`${fileName}.json`)
     .then(response => response.json())
