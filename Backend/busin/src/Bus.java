@@ -6,6 +6,25 @@ public class Bus{
     private String busDeparture;
     private String seatcnt;
     private String maxCnt;
+    private Integer reserve=0;
+    private Integer cancel=0;
+
+    public Integer getReserve() {
+        return reserve;
+    }
+
+    public void setReserve(Integer reserve) {
+        this.reserve = reserve;
+    }
+
+    public Integer getCancel() {
+        return cancel;
+    }
+
+    public void setCancel(Integer cancel) {
+        this.cancel = cancel;
+    }
+
     public String getSeatcnt() {
         return seatcnt;
     }
