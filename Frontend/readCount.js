@@ -1,5 +1,4 @@
 let tablerow = document.getElementById("entries");
-let seat;
 let OR;
 let SF;
 let FP;
@@ -7,9 +6,10 @@ let FP;
 fetch("sampleData.json") //File path 
     .then(response => response.json())
     .then(datas => datas.forEach(data => {
-        OR = data.Ordinary;
-        FP = data.Fastpassenger;
-        SF = data.SuperFast;
+
+        OR = data.Ordinary; //ordinary buscount
+        FP = data.Fastpassenger; //Fastpassenger buscount
+        SF = data.SuperFast; //Superfast buscount
 
         let row1 = tablerow.insertRow(0);
         row1.insertCell(0).innerHTML = "Ordinary";
@@ -23,7 +23,6 @@ fetch("sampleData.json") //File path
         row3.insertCell(0).innerHTML = "Fast Passenger"
         row3.insertCell(1).innerHTML = FP
 
-        
     }))
     .catch(error => console.error('Error fetching data:', error));
 
