@@ -42,18 +42,21 @@ public class Reservation {
 //    }
 
     public void seatUpdater(ArrayList<Bus> bus, ArrayList<Reserve> res) {
-        for (Reserve varRes : res) {
+        for (Reserve varRes : res)
+            try {
+
             if (varRes.getAction().equals("reserve")) {
                 for (Bus newbus : bus) {
                     if (newbus.getBusName().equals(varRes.getBusName())) {
                         newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) - 1));
-                        if (Integer.parseInt(newbus.getSeatcnt()) > 0) {
-                            newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1));
+                        if (Integer.parseInt(newbus.getSeatcnt()) >= 0) {
+                            newbus.setReserve(newbus.getReserve() - 1);
 
                             System.out.println("SEAT RESERVED FOR  " + newbus.getBusName());
                         } else {
-                            newbus.setReserve(newbus.getReserve() - 1);
-                            System.out.println("SEATS ARE FULL AFTER" + newbus.getReserve());
+                            newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1));
+
+                            throw new Exception("SEATS ARE FULL AFTER" + newbus.getReserve());
 
 
                         }
@@ -64,19 +67,23 @@ public class Reservation {
                     for (Bus newbus : bus) {
                         if (newbus.getBusName().equals(varRes.getBusName())) {
                             newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1));
-                            if (Integer.parseInt(newbus.getSeatcnt()) < Integer.parseInt(newbus.getMaxCnt())) {
-
+                            if (Integer.parseInt(newbus.getSeatcnt()) <=Integer.parseInt(newbus.getMaxCnt())) {
+                                newbus.setCancel(newbus.getCancel() + 1);
                                 System.out.println("SEAT Cancelled FOR  " + newbus.getBusName());
 
                             } else {
-                                newbus.setReserve(newbus.getCancel() + 1);
-                                System.out.println("NO SEATS ARE RESERVED AFTER CANCEL " + newbus.getCancel());
+                                newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) - 1));
+
+                                throw new Exception("NO SEATS ARE RESERVED AFTER CANCEL " + newbus.getCancel());
+
 
                             }
                         }
                     }
                 }
 
+            }catch (Exception e){
+                System.out.println(e.getMessage());
             }
         }
     }

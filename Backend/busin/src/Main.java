@@ -16,9 +16,13 @@ public class Main {
 
         //creating objects
         SourceDest sor = new SourceDest();
+        Reservation re = new Reservation();
         ArrayList<Bus> Bus;
         ArrayList<Reserve> reserves;
+        reserves =csvr.getReserveValue(filesr);
         Bus = csvr.getvalue(filesrc);
+
+        re.seatUpdater(Bus,reserves);
         while (true) {
             System.out.println("=================================================================================================");
             System.out.println("\n1.TypeFiltering\n2.SourceDestinationFiltering\n3.TimeFiltering\n4.Reservation\n5.Exit");
@@ -99,8 +103,8 @@ public class Main {
 
             }break;
                 case 4:
-                    System.exit(0);
-
+        csvw.CSVWriterFilter(Bus,filedesti+"reso.csv");
+        break;
                 case 5:
                     System.exit(0);
                 default:
@@ -114,9 +118,7 @@ public class Main {
 
         //This part of code is for reservation
 //        reserves = csvr.getReserveValue(filesr);
-//        Reservation re = new Reservation();
-//        re.seatUpdater(Bus,reserves);
-//        csvw.CSVWriterReservation(Bus,filedesti);
+
 
 
     }
