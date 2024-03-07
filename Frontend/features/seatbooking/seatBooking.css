@@ -146,8 +146,8 @@ h2{
     justify-content: space-around;
 }
 
-.BusNameInputField{
-    padding: 10px;
+.BusNameInputField,.optionSelections{
+    padding-bottom: 10px;
 }
 
 input[type="submit"], input[type="text"]{
