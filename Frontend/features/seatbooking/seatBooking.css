@@ -94,7 +94,7 @@ table {
 td,th {
 	padding: 5px;
 	border-right: 1px solid #ccc;
-    height: 35px;
+    height: 30px;
 }
 thead th {
 	background: #888;
@@ -169,13 +169,16 @@ input[type="submit"], input[type="text"]{
 }
 
 input[type="text"]{
-    border: 1px solid #ccc;
-}
+    width: 200px;
+    height: 18px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    border: 0;}
 
 input[type="submit"],#exportButton {
     background-color: #633eea;
     width: 125px;
-    height: 30px;
+    height: 35px;
     color: white;
     cursor: pointer;
     border-radius: 5px;
