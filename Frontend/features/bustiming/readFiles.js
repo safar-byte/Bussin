@@ -1,22 +1,31 @@
-document.getElementById("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    displayData();
-});
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById("submitBtn").addEventListener('click',readFiles);
+})
 
-function displayData(){
-    let tablerow = document.getElementById("entries");
-    var actionValue = form.querySelector('input[name="timingSelection"]:checked').value;
+let tablerow = document.getElementById("entries");
 
-    fetch("out.json") //File path 
+
+function readFiles(ev){
+
+    
+    ev.preventDefault();
+    // let file = document.getElementById("form").value;
+    console.log(document.getElementById("form").value)
+
+    let fileName = "MorningFilter"
+ 
+    fetch(`${fileName}.json`)
     .then(response => response.json())
     .then(datas => datas.forEach(data => {
+        
 
-        let row = tablerow.insertRow(0);
-        row.insertCell(0).innerHTML = data.name;
-        row.insertCell(1).innerHTML = data.Count;
-
+        let row = tablerow.insertRow(-1);
+        row.insertCell(0).innerHTML = data.Bus_name;
+        row.insertCell(1).innerHTML = data.Bus_type;
+        row.insertCell(2).innerHTML = data.Source;
+        row.insertCell(3).innerHTML = data.Destination;
+        row.insertCell(4).innerHTML = data.Departure;
+        row.insertCell(5).innerHTML = data.SeatCount;
+        
     }))
-    .catch(error => console.error('Error fetching data:', error));
-      
-
 }
