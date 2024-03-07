@@ -3,20 +3,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 let tablerow = document.getElementById("entries");
+// var oldTable = entries.innerHTML;
+
 
 
 function showData(ev){
     ev.preventDefault();
+    entries.innerHTML = '';
+    
     let splace = document.getElementById("sourcePlace").value;
     let dplace = document.getElementById("destinationPlace").value;
     let place = splace+dplace;
-    console.log(`splace : ${splace}`)
-    console.log(`dplace : ${dplace}`)
-    console.log(`file name : ${place}.json`)
+ 
     fetch(`${place}.json`)
     .then(response => response.json())
     .then(datas => datas.forEach(data => {
-        console.log(data.Bus_name)
+        
 
         let row = tablerow.insertRow(-1);
         row.insertCell(0).innerHTML = data.Bus_name;
