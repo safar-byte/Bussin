@@ -4,32 +4,32 @@ import java.util.ArrayList;
 
 public class Time {
 
-    public ArrayList<Bus> Filter(ArrayList<Bus> bustime, String Select) {
-        String strTime = "";
-        String endingTime = "";
-        String strTime1 = "";
-        String endingTime1 = "";
+    public static ArrayList<Bus> Filter(ArrayList<Bus> bustime, String Select) {
+        ArrayList<Bus> time = new ArrayList<>();
+
+
         switch (Select) {
             case "M":
-                strTime = "08:00";
-                endingTime = "11:59";
+                time=restOfNight(bustime,"08:00","11:59");
                 break;
             case "A":
-                strTime = "12:00";
-                endingTime = "15:59";
+                time=restOfNight(bustime,"12:00","15:59");
                 break;
             case "E":
-                strTime = "16:00";
-                endingTime = "19:59";
+                time=restOfNight(bustime,"16:00","19:59");
                 break;
             case "N":
-                night(bustime);
+                time=night(bustime);
                 break;
 
         }
-        ArrayList<Bus> timeShedule = new ArrayList<>();
-        if(!Select.equals("N")){
 
+        return time;
+    }
+
+        public static ArrayList<Bus> restOfNight(ArrayList<Bus> bustime,String strTime,String endingTime){
+
+            ArrayList<Bus> timeShedule = new ArrayList<>();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         LocalTime StartTime = LocalTime.parse(strTime, formatter);
@@ -38,12 +38,12 @@ public class Time {
 
         for (Bus bus : bustime) {
             LocalTime departure = LocalTime.parse(bus.getBusDeparture(), formatter);
-            if (departure.isAfter(StartTime) && departure.isBefore(endTime)) {
+            if (departure.isAfter(StartTime)||departure.equals(strTime) && departure.isBefore(endTime)||departure.equals(endTime)) {
                 timeShedule.add(bus);
             }
 
 
-        }}
+        }
 
         System.out.println("FILE SCHEDULE CREATED SUCCESSFULLY");
         return timeShedule;
@@ -51,25 +51,27 @@ public class Time {
 
     }
 
-    public void night(ArrayList<Bus> bustime) {
-        String strTime = "20:00";
+    public static ArrayList<Bus> night(ArrayList<Bus> bustime) {
+        String strTime = "19:59";
         String endingTime = "23:59";
         String strTime1 = "01:00";
         String endingTime1 = "07:59";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
         LocalTime StartTime = LocalTime.parse(strTime, formatter);
         LocalTime endTime = LocalTime.parse(endingTime, formatter);
+        LocalTime StartTime1 = LocalTime.parse(strTime1, formatter);
+        LocalTime endTime1 = LocalTime.parse(endingTime1, formatter);
         ArrayList<Bus> timeShedule = new ArrayList<>();
         for (Bus bus : bustime) {
             LocalTime departure = LocalTime.parse(bus.getBusDeparture(), formatter);
-            if (departure.isAfter(StartTime) && departure.isBefore(endTime)) {
+            if (departure.isAfter(StartTime)||departure.equals(strTime) && departure.isBefore(endTime)||departure.equals(endTime)) {
                 timeShedule.add(bus);
-            } else if (departure.isBefore(StartTime) && departure.isAfter(endTime)) {
+            } else if (departure.isBefore(StartTime1)|| departure.equals(strTime1)&& departure.isAfter(endTime1)||departure.equals(endTime1)) {
                 timeShedule.add(bus);
             }
 
         }
-
+return timeShedule;
     }
 
 }
