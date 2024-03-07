@@ -4,11 +4,11 @@ import java.util.Set;
 
 public class Reservation {
     public void seatUpdater( ArrayList<Bus> bus ,ArrayList<Reserve> res) {
-        ArrayList<String> uniqBusList = new ArrayList<>();
+        Set<String> uniqBusSet = new HashSet<>();
         for (Reserve var : res) {
-            uniqBusList.add(var.getBusName());
+            uniqBusSet.add(var.getBusName());
         }
-        Set<String> uniqBusSet = new HashSet<>(uniqBusList);
+
         for(String busname:uniqBusSet)
         {
             for(Reserve varRes:res)
