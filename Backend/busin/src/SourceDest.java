@@ -11,7 +11,7 @@ public class SourceDest {
 
 
 
-    public void runSourceDest(ArrayList<Bus> Bus, String src, String dest, String reqd,String filecsv) throws IOException {
+    public  void  runSourceDest(ArrayList<Bus> Bus, String src, String dest, String reqd,String filecsv) throws IOException {
 
 
             switch (reqd) {
@@ -20,11 +20,12 @@ public class SourceDest {
                         if (bus.getBusSource().equals(src)) {
                             reqdList.add(bus);
                             CSW.CSVWriterFilter(reqdList, filecsv + src + "source.csv");
+
                         }
                     }
                     break;
                 }
-                case "sd":
+                case "sd": {
                     for (Bus bus : Bus) {
                         if (bus.getBusSource().equals(src) && bus.getBusDestination().equals(dest)) {
                             reqdList.add(bus);
@@ -32,15 +33,16 @@ public class SourceDest {
                         }
                         break;
                     }
-                    case "d":
-                        System.out.println("d");
-                    for (Bus bus : Bus) {
-                        if (bus.getBusDestination().equals(dest)) {
-                            reqdList.add(bus);
-                            CSW.CSVWriterFilter(reqdList, filecsv + dest + "dest.csv");
+                }break;
+                    case "d": {
+                        for (Bus bus : Bus) {
+                            if (bus.getBusDestination().equals(dest)) {
+                                reqdList.add(bus);
+                                CSW.CSVWriterFilter(reqdList, filecsv + dest + "dest.csv");
+                            }
+                            break;
                         }
-                        break;
-                    }
+                    }break;
 
 
 
