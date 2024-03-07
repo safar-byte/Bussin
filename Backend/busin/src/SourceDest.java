@@ -19,9 +19,8 @@ public class SourceDest {
                     for (Bus bus : Bus) {
                         if (bus.getBusSource().equals(src)) {
                             reqdList.add(bus);
-                            CSW.CSVWriterFilter(reqdList, filecsv + src + "source.csv");
-
                         }
+                        CSW.CSVWriterFilter(reqdList, filecsv + src + "Source.csv");
                     }
                     break;
                 }
@@ -29,17 +28,16 @@ public class SourceDest {
                     for (Bus bus : Bus) {
                         if (bus.getBusSource().equals(src) && bus.getBusDestination().equals(dest)) {
                             reqdList.add(bus);
-                            CSW.CSVWriterFilter(reqdList, filecsv + src + dest + ".csv");
                         }
-                        break;
+                        CSW.CSVWriterFilter(reqdList, filecsv + src + dest + ".csv");
                     }
                 }break;
                     case "d": {
                         for (Bus bus : Bus) {
                             if (bus.getBusDestination().equals(dest)) {
                                 reqdList.add(bus);
-                                CSW.CSVWriterFilter(reqdList, filecsv + dest + "dest.csv");
                             }
+                            CSW.CSVWriterFilter(reqdList, filecsv + dest + "Dest.csv");
                             break;
                         }
                     }break;

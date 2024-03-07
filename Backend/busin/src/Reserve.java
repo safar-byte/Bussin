@@ -6,6 +6,7 @@ public class Reserve {
     private String action;
     private String busName;
 
+
     public Reserve(String action, String busName) {
         this.action = action;
         this.busName = busName;
