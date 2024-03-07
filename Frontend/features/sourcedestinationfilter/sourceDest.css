@@ -36,6 +36,9 @@ a:hover {
     background-color: transparent;
     text-decoration: none;
 }
+.activePage{
+    color: beige;
+}
 .redirect{
     display: flex;
     height: 30px;

@@ -35,6 +35,9 @@ a:hover {
     background-color: transparent;
     text-decoration: none;
 }
+.activePage{
+    color: beige;
+}
 .redirect{
     display: flex;
     height: 30px;
@@ -83,7 +86,7 @@ table {
     overflow: auto;
         
     }
-    th::before {
+    /* th::before {
         content: "";
         position: absolute;
         left: 0;
@@ -91,7 +94,7 @@ table {
         bottom: 20%; 
         width: 0.5px; 
         background-color: black; 
-    }
+    } */
     
     td,th{
         border-bottom: 1px solid black;
