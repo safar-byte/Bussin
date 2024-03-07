@@ -202,8 +202,10 @@ h1{
     margin: 0px;
     color: white;
 }
+
 h2{
-    margin: 0px;
+    margin: 0px 0px 0px 10px;
+    text-align: center;
     padding: 0px 0px 10px 0px;
 }
 .submitBtnDiv{
