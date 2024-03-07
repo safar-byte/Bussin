@@ -1,0 +1,26 @@
+[
+  {
+    "Bus_name": "KSRTC07",
+    "Bus_type": "SuperFast",
+    "Source": "Palakkad",
+    "Destination": "Kasaragod",
+    "Departure": "18:50",
+    "SeatCount": 45
+  },
+  {
+    "Bus_name": "KSRTC14",
+    "Bus_type": "SuperFast",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Pathanamthitta",
+    "Departure": "16:30",
+    "SeatCount": 55
+  },
+  {
+    "Bus_name": "KSRTC15",
+    "Bus_type": "FastPassenger",
+    "Source": "Palakkad",
+    "Destination": "Kottayam",
+    "Departure": "19:25",
+    "SeatCount": 55
+  }
+]

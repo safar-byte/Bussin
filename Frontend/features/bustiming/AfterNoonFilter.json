@@ -1,0 +1,26 @@
+[
+  {
+    "Bus_name": "KSRTC01",
+    "Bus_type": "SuperFast",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "14:25",
+    "SeatCount": 30
+  },
+  {
+    "Bus_name": "KSRTC05",
+    "Bus_type": "FastPassenger",
+    "Source": "Palakkad",
+    "Destination": "Malappuram",
+    "Departure": "14:45",
+    "SeatCount": 35
+  },
+  {
+    "Bus_name": "KSRTC16",
+    "Bus_type": "Ordinary",
+    "Source": "Kannur",
+    "Destination": "Malappuram",
+    "Departure": "14:45",
+    "SeatCount": 44
+  }
+]
