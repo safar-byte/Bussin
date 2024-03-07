@@ -6,10 +6,6 @@ body{
     width: 100%;
     }
 
-.header h1{
-    font-family: "Signika";
-    color: white;
-}
 
 .sidebar{   
     display: inline-block;
@@ -74,31 +70,17 @@ a:hover {
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    text-align: end;
     height: 40px;
     padding: 20px;
-    margin: 0px;
-
-    #createButton{
-        color: #ffffff;
-        background: #425151;
-        border-radius: 5px;
-        height: 30px;
-        width: 100px;
-        border: none;
-    }
+    color: white;    
 }
-
-
-.busDetails{
+.sorceDestInput{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
+    padding: 20px;
 }
 
-input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
+#sourcePlace,#destinationPlace{
     width: 200px;
     height: 20px;
     border-radius: 4px;
@@ -107,20 +89,6 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
 }
 
 
-.travelDetails{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-}
-.scrollingEffect{
-    border-collapse: collapse;
-    text-align: left;
-    padding: 20px;
-    margin: 0 auto;
-    width: 95%;
-    overflow: auto;
-}
 
 table {
     border-collapse: collapse;
@@ -128,7 +96,8 @@ table {
     padding: 20px;
     margin: 0 auto;
     width: 95%;
-  
+    overflow: auto;
+        
     }
     th::before {
         content: "";
@@ -153,8 +122,7 @@ table {
 }
 
 .mid{
-    position: relative;
-    min-height: calc(100vh - 175px);
+    height: calc(100vh - 310px);
     margin: 20px;
     text-align: center;
     border: 2px;
@@ -167,24 +135,30 @@ table {
 
 }
 #createForm {
-    display: inline-block;
     background-color: #f2f2f2;
     padding: 20px;
     margin: 0px 20px 0px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: auto;
+}       
+label{
+    font-size: 18px;
 }
 
 h1{
     margin: 0px;
+}
+h2{
+    margin: 0px 0px 0px 10px;
+    text-align: center;
 }
 .submitBtnDiv{
     display: flex;
     justify-content: center;
 
 }
-.submitBtnDiv input[type="submit"],#exportButton{
+.submitBtnDiv input[type="submit"]{
     background-color: #633eea;
     color: white;
     width: 125px;
@@ -197,17 +171,3 @@ h1{
     transition: .3s ease;
 }
 
-#exportButton{
-    position: absolute;
-    left: 45%;
-    bottom: 10px;
-}
-
-#seatBookForm{
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin: 0px 20px 0px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: auto;
-}

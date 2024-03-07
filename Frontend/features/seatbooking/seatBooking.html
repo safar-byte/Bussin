@@ -16,14 +16,14 @@
   <body>
     <div class="sidebar">
       <div class="sidebarLogo">
-        <img src="./assets/busin.jpeg" alt="Logo" />
+        <img src="../../assets/busin.jpeg" alt="Logo" />
       </div>
       <div class="sidebarContent">
-        <a href="bussin.html"><div class="redirect">Home</div></a>
-        <a href=""><div class="redirect">Bus Count</div></a>
+        <a href="../homepage/bussin.html"><div class="redirect">Home</div></a>
+        <a href="../buscount/busCount.html"><div class="redirect">Bus Count</div></a>
         <a href="seatBooking.html"><div class="redirect">Seat Booking</div></a>
-        <a href=""><div class="redirect">Bus Availability</div></a>
-        <div></div>
+        <a href="../sourcedestinationfilter/sourceDest.html"><div class="redirect">Bus Availability</div></a>
+        <a href=""><div class="redirect">Bus Timing Range</div></a>
       </div>
     </div>
     <div class="main">
@@ -31,37 +31,42 @@
         <h1>BUSSIN.com</h1>
       </header>
       <div id="seatBookingForm">
-        <h2 style="color: brown;">Book Your Tickets!</h1>
+        <h2 style="color: brown;">Book Your Tickets!</h2>
         <br />
         <form id="form">
           <div class="busDetails">
+            <div class="optionSelections">
             <label for="optionSelection"
-              >Select option:
+              ><b>Select option:</b>
               <input
                 type="radio"
                 name="optedValue"
                 id="reserve"
+                value="Reservation"
               />
               <label for="reserve">Reservation</label>
               <input
                 type="radio"
                 name="optedValue"
                 id="leave"
+                value="Leave"
               />
               <label for="leave">Leave</label>
             </label>
-            <br>
+          </div>
+          <div class="BusNameInputField">
             <label for="busName"
-              >Bus Name:
+              ><b>Bus Name:</b>
               <input type="text" name="busName" id="busName" required
             /></label>
-            <br>
-            <input type="submit" value="Submit" id="submitBtn" />
           </div>
-          
+          <div class="submitButton"><input type="submit" value="Submit" id="submitBtn" /></div>
+            
+          </div>
         </form>
       </div>
       <div class="mid">
+        <div class="scrollingEffect">
         <table>
           <thead>
             <tr>
@@ -71,12 +76,11 @@
           </thead>
           <tbody id="entries"></tbody>
         </table>
+      </div>
         <button type="button" id="exportButton">Export</button>
       </div>
     </div>
-    <script src="createForm.js"></script>
-    <script src="formTable.js"></script>
-    <script src="index.js"></script>
-    <script src="export.js"></script>
+    <script src="exportSeatBooking.js"></script>
+    <script src="seatBooking.js"></script>
   </body>
 </html>

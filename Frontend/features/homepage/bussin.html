@@ -10,30 +10,29 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Signika:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="bussin.css" />
+    <link rel="stylesheet" href="../../common/bussin.css" />
   </head>
 
   <body>
     <div class="sidebar">
       <div class="sidebarLogo">
-          <img src="./assets/busin.jpeg" alt="Logo" />
+        <img src="../../assets/busin.jpeg" alt="Logo" />
       </div>
-      <div class=sidebarContent>
-              <a href="bussin.html"><div class="redirect">Home</div></a>
-              <a href="busCount.html"><div class="redirect">Bus Count</div></a>
-              <a href="seatBooking.html"><div class="redirect">Seat Booking</div></a>
-              <a href=""><div class="redirect">Bus Availability</div></a>
-              <div ></div>
+      <div class="sidebarContent">
+        <a href="bussin.html"><div class="redirect">Home</div></a>
+        <a href="../buscount/busCount.html"><div class="redirect">Bus Count</div></a>
+        <a href="../seatbooking/seatBooking.html"><div class="redirect">Seat Booking</div></a>
+        <a href="../sourcedestinationfilter/sourceDest.html"><div class="redirect">Bus Availability</div></a>
+        <a href=""><div class="redirect">Bus Timing Range</div></a>
       </div>
-  </div>
+    </div>
     <div class="main">
       <header>
-        <h1 style="color: white;">BUSSIN.com</h1>
+        <h1>BUSSIN.com</h1>
         <button type="button" id="createButton">+ Create New</button>
       </header>
       <div id="createForm" style="display: none">
-        <h1>Enter Bus Details:</h1>
-        <br />
+        <h2>Enter Bus Details:</h2>
         <form id="form">
           <div class="busDetails">
             <label for="name"
@@ -116,7 +115,7 @@
         </form>
       </div>
       <div class="mid">
-        <div class="srollingEffect">
+        <div class="scrollingEffect">
           <table>
             <thead>
               <tr>
@@ -135,8 +134,7 @@
       </div>
     </div>
     <script src="createForm.js"></script>
-    <script src="formTable.js"></script>
-    <script src="index.js"></script>
+    <script src="../../common/formTable.js"></script>
     <script src="export.js"></script>
   </body>
 </html>
