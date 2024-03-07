@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="busTiming.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebarLogo">
+        <img src="../../assets/busin.jpeg" alt="Logo" />
+      </div>
+      <div class="sidebarContent">
+        <a href="../homepage/bussin.html"><div class="redirect">Home</div></a>
+        <a href="../buscount/busCount.html"><div class="redirect">Bus Count</div></a>
+        <a href="../seatbooking/seatBooking.html"><div class="redirect">Seat Booking</div></a>
+        <a href="../sourcedestinationfilter/sourceDest.html"><div class="redirect">Bus Availability</div></a>
+        <a href="busTiming.html"><div class="redirect"><span class="activePage">Bus Timing Range</span></div></a>
+      </div>
+    </div>
+    <div class="main">
+      <header>
+        <h1>BUSSIN.com</h1>
+      </header>
+      <div id="createForm">
+        <h2>Get the Details you Wish!</h2>
+        <form id="form">
+            <div class="timingSelection">
+                <label for="timingSelection"><b>Select the time range: </b>
+                <label for="morningLabel"><input type="radio" name="TimeSelect" id="Morning" value="8:00 am - 12:00 pm">8 am to 12 pm</label>
+                <label for="afternoonLabel"><input type="radio" name="TimeSelect" id="Afternoon" value="12:00 pm - 4:00 pm">12 pm to 4 pm</label>
+                <label for="eveningLabel"><input type="radio" name="TimeSelect" id="Evening" value="4:00 pm - 8:00 pm">4 pm to 8 pm</label>
+                <label for="nightLabel"><input type="radio" name="TimeSelect" id="Night" value="8:00 pm - 8:00 am"></label>8 pm to 8am</label>
+            </div>
+        
+          <div class="submitBtnDiv">
+            <input type="submit" value="Submit" id="submitBtn" />
+          </div>
+        </form>
+      </div>
+      <div class="mid">
+        <div class="scrollingEffect">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Departure</th>
+                <th>Total Seats</th>
+              </tr>
+            </thead>
+            <tbody id="entries"></tbody>
+          </table>
+        </div>
+        <button type="button" id="exportButton">Export</button>
+      </div>
+    </div>
+    <script src="createForm.js"></script>
+    <script src="../../common/formTable.js"></script>
+    <script src="export.js"></script>
+  </body>
+</html>
