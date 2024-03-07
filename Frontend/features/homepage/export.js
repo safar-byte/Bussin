@@ -25,18 +25,11 @@ function exportToJsonFile() {
     let url = URL.createObjectURL(blob);
     let a = document.createElement("a");
 
+    console.log(dataArray.length)
 
     /////////////// null finder //////////////////
-    const reader = new FileReader();
-    reader.addEventListener('loadend' , () => {
-        const arrayBuffer = reader.result
-        console.log(arrayBuffer)
-        console.log(blob.size)
-    });
 
-    reader.readAsArrayBuffer(blob)
-
-    if(blob.size == 2){
+    if(dataArray.length == 0){
         window.alert("no data to export")
     }else{
         window.alert("data exported")
