@@ -11,10 +11,4 @@ fetch("out.json") //File path
 
     }))
     .catch(error => console.error('Error fetching data:', error));
-
-
-
-
-  
-      
       
