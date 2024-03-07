@@ -25,7 +25,7 @@ function addData() {
       is_unique = false;
     }
     else{
-      charSet.add(busName);
+      // charSet.add(busName);
       console.log("true");
       is_unique = true;
     }
@@ -37,7 +37,7 @@ function addData() {
       window.alert("Your source and destination are same!!")
     }else{
       if(is_unique){ //busname validation
-
+        charSet.add(busName);
         console.log("different")
         let row = tablerow.insertRow(-1);
         let cell1 = row.insertCell(0);
