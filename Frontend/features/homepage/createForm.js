@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var createButton = document.getElementById("createButton");
     var createForm = document.getElementById("createForm");
     var midDiv = document.querySelector(".mid");
+    var tableDiv = document.querySelector(".scrollingEffect")
 
     createButton.addEventListener("click", function() {
         toggleCreateForm();
@@ -23,9 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function adjustMidDivHeight(isFormVisible) {
 
-        if(isFormVisible){ midDiv.style.minHeight = `calc(100vh - 356px)`;}
+        if(isFormVisible){ 
+            midDiv.style.minHeight = `calc(100vh - 356px)`;
+            tableDiv.style.maxHeight=`calc(100vh - 390px)`;
+    }
         else{
-            midDiv.style.minHeight = `calc(100vh - 175px)`
+            midDiv.style.minHeight = `calc(100vh - 175px)`;
+            tableDiv.style.maxHeight =`calc(100vh - 230px)`;
+
         }
        
     }

@@ -85,8 +85,8 @@ header{
         border-radius: 5px;
         height: 30px;
         width: 100px;
-        border: none;
-        cursor: pointer;
+        cursor: pointer;   
+        transition: .3s ease;     
     }
 }
 
@@ -105,7 +105,6 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
     border: 0;
 }
 
-
 .travelDetails{
     display: flex;
     justify-content: space-around;
@@ -117,7 +116,7 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
     padding: 20px;
     margin: 0px;
     overflow-y: auto;
-    max-height: 470px;
+    max-height: calc(100vh - 280px);
 }
 
 /* table {
@@ -149,28 +148,33 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
 
  
 } */
+
 table {
 	border-collapse: collapse;
     padding: 20px;
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
 }
 td,th {
-	padding: 5px;
-	min-width: 180px;
-	border-right: 1px solid #ccc
+	padding: 5px 5px 5px 10px;
+	min-width: 150px;
+	border-right: 1px solid #ccc;
+    height: 35px;
+    min-width: 150px;
+
 }
 thead tr {
 	background: #888;
 	color: #eee;
-	display: block;
 	position: relative;
+    min-width: 150px;
+
+
 }
 tbody {
-	display: block;
-	height: 200px;
 	overflow-y: auto;
 }
+
 tbody tr:nth-child(even) {
 	background: #ddd;
 }
@@ -197,16 +201,17 @@ tbody tr:nth-child(even) {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: auto;
 }
-
+    
 h1{
     margin: 0px;
     color: white;
 }
-
 h2{
-    margin: 0px 0px 0px 10px;
-    text-align: center;
+    margin: 0px;
     padding: 0px 0px 10px 0px;
+    text-align: center;
+    color: darkblue;
+
 }
 .submitBtnDiv{
     display: flex;

@@ -92,8 +92,7 @@ header{
 }
 
 
-
-table {
+/* table {
     border-collapse: collapse;
     text-align: left;
     padding: 20px;
@@ -121,11 +120,35 @@ table {
         
         position: relative;
 
- 
+} */
+
+table {
+	border-collapse: collapse;
+    padding: 20px;
+    margin: 0 auto;
+    width: 95%;
+}
+td,th {
+	padding: 5px;
+	min-width: 180px;
+	border-right: 1px solid #ccc;
+    height: 30px;
+}
+thead tr {
+	background: #888;
+	color: #eee;
+	position: relative;
+    margin-top: 20px;
+}
+tbody {
+	overflow-y: auto;
+}
+tbody tr:nth-child(even) {
+	background: #ddd;
 }
 
 .mid{
-    height: calc(100vh - 310px);
+    height: calc(100vh - 345px);
     margin: 20px;
     text-align: center;
     border: 2px;
@@ -134,7 +157,8 @@ table {
     display: block;
     background: white;
     overflow: auto;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+    padding-top: 20px;
 
 }
 #createForm {
@@ -155,6 +179,8 @@ h1{
 h2{
     margin: 0px 0px 0px 10px;
     text-align: center;
+    color: darkblue;
+
 }
 .submitBtnDiv{
     display: flex;

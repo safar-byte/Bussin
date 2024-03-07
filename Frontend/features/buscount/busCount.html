@@ -14,11 +14,21 @@
             <img src="../../assets/busin.jpeg" alt="Logo" />
         </div>
         <div class=sidebarContent>
-                <a href="../homepage/bussin.html"><div class="redirect">Home</div></a>
-                <a href="busCount.html"><div class="redirect"><span class="activePage">Bus Count</span></div></a>
-                <a href="../seatbooking/seatBooking.html"><div class="redirect">Seat Booking</div></a>
-                <a href="../sourcedestinationfilter/sourceDest.html"><div class="redirect">Bus Availability</div></a>
-                <a href="../bustiming/busTiming.html"><div class="redirect">Bus Timing Range</div></a>
+            <a href="../homepage/bussin.html">
+                <div class="redirect">Home</div>
+            </a>
+            <a href="busCount.html">
+                <div class="redirect"><span class="activePage">Bus Count</span></div>
+            </a>
+            <a href="../seatbooking/seatBooking.html">
+                <div class="redirect">Seat Booking</div>
+            </a>
+            <a href="../sourcedestinationfilter/sourceDest.html">
+                <div class="redirect">Bus Availability</div>
+            </a>
+            <a href="../bustiming/busTiming.html">
+                <div class="redirect">Bus Timing Range</div>
+            </a>
         </div>
     </div>
     <div class="main">
@@ -26,15 +36,17 @@
             <h1>BUSSIN.com</h1>
         </header>
         <div class="mid">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Bus Type</th>
-                        <th>Count</th>
-                    </tr>
-                </thead>
-                <tbody id="entries"></tbody>
-            </table>
+            <div class="scrollingEffect">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bus Type</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody id="entries"></tbody>
+                </table>
+            </div>
         </div>
     </div>
     <script src="readCount.js"></script>
