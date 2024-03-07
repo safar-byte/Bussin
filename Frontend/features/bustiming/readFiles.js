@@ -10,9 +10,10 @@ function readFiles(ev){
     
     ev.preventDefault();
     // let file = document.getElementById("form").value;
-    console.log(document.getElementById("form").value)
-
+   
+    var actionValue = form.querySelector('input[name="TimeSelect"]:checked').value;
     let fileName = "MorningFilter"
+    console.log(actionValue)
  
     fetch(`${fileName}.json`)
     .then(response => response.json())
