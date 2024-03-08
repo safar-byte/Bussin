@@ -22,6 +22,9 @@ function showData(ev){
     }
     else if (splace && dplace == ''){
         place = `${splace}source`
+    }else{
+        window.alert("Select source or Destination")
+
     }
     
     console.log(`${place}`)
@@ -41,8 +44,8 @@ function showData(ev){
     }))
     .catch(error => {
         let row = tablerow.insertRow(0);
-        row.insertCell(0).innerHTML = "No Bus available";
-
+        if(place)
+            row.insertCell(0).innerHTML = "No Bus available";
     });
     document.getElementById("form").reset();
     
