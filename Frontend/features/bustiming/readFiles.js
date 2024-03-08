@@ -7,7 +7,6 @@ let tablerow = document.getElementById("entries");
 
 function readFiles(ev){
     tablerow.innerHTML = '';
-
     ev.preventDefault();
    
     let fileName = form.querySelector('input[name="TimeSelect"]:checked').value;
@@ -26,4 +25,6 @@ function readFiles(ev){
         row.insertCell(5).innerHTML = data.SeatCount;
         
     }))
+    .catch(error => console.error('Error fetching data:', error));
+
 }
