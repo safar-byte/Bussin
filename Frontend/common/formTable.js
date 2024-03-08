@@ -19,25 +19,19 @@ function addData() {
   let is_unique = true;
 
   if (charSet.has(busName)) {
-    console.log("false");
     is_unique = false;
   } else {
     // charSet.add(busName);
-    console.log("true");
     is_unique = true;
   }
 
-  //////////////////////////////////////////////////////////////
-  let count = parseInt(seatCount);
   if (source == destination) {
     //source - destination validation
     window.alert("Your source and destination are same!!");
   } else {
     if (is_unique) {
       //busname validation
-      console.log(seatCount);
       charSet.add(busName);
-      console.log("different");
       let row = tablerow.insertRow(-1);
       let cell1 = row.insertCell(0);
       let cell2 = row.insertCell(1);
