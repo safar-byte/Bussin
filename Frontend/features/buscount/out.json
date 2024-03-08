@@ -1,0 +1,14 @@
+[
+  {
+    "Bus_type": "Ordinary",
+    "Count": 5
+  },
+  {
+    "Bus_type": "SuperFast",
+    "Count": 8
+  },
+  {
+    "Bus_type": "Fast Passenger",
+    "Count": 6
+  }
+]

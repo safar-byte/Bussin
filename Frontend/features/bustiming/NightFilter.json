@@ -1,0 +1,106 @@
+[
+  {
+    "Bus_name": "KSRTC02",
+    "Bus_type": "FastPassenger",
+    "Source": "Kollam",
+    "Destination": "Pathanamthitta",
+    "Departure": "20:30",
+    "SeatCount": 50
+  },
+  {
+    "Bus_name": "KSRTC03",
+    "Bus_type": "Ordinary",
+    "Source": "Ernakulam",
+    "Destination": "Kottayam",
+    "Departure": "02:45",
+    "SeatCount": 35
+  },
+  {
+    "Bus_name": "KSRTC04",
+    "Bus_type": "SuperFast",
+    "Source": "Kozhikode",
+    "Destination": "Pathanamthitta",
+    "Departure": "23:00",
+    "SeatCount": 50
+  },
+  {
+    "Bus_name": "KSRTC06",
+    "Bus_type": "FastPassenger",
+    "Source": "Kozhikode",
+    "Destination": "Kannur",
+    "Departure": "07:35",
+    "SeatCount": 50
+  },
+  {
+    "Bus_name": "KSRTC09",
+    "Bus_type": "FastPassenger",
+    "Source": "Kollam",
+    "Destination": "Kasaragod",
+    "Departure": "20:00",
+    "SeatCount": 35
+  },
+  {
+    "Bus_name": "KSRTC10",
+    "Bus_type": "FastPassenger",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "20:50",
+    "SeatCount": 50
+  },
+  {
+    "Bus_name": "KSRTC11",
+    "Bus_type": "Ordinary",
+    "Source": "Thrissur",
+    "Destination": "Ernakulam",
+    "Departure": "04:42",
+    "SeatCount": 39
+  },
+  {
+    "Bus_name": "KSRTC12",
+    "Bus_type": "SuperFast",
+    "Source": "Wayanad",
+    "Destination": "Kollam",
+    "Departure": "02:43",
+    "SeatCount": 52
+  },
+  {
+    "Bus_name": "KSRTC13",
+    "Bus_type": "Ordinary",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kollam",
+    "Departure": "22:05",
+    "SeatCount": 45
+  },
+  {
+    "Bus_name": "KSRTC17",
+    "Bus_type": "FastPassenger",
+    "Source": "Pathanamthitta",
+    "Destination": "Palakkad",
+    "Departure": "01:00",
+    "SeatCount": 30
+  },
+  {
+    "Bus_name": "KSRTC18",
+    "Bus_type": "Ordinary",
+    "Source": "Kollam",
+    "Destination": "Thiruvananthapuram",
+    "Departure": "21:45",
+    "SeatCount": 33
+  },
+  {
+    "Bus_name": "KSRTC20",
+    "Bus_type": "SuperFast",
+    "Source": "Kollam",
+    "Destination": "Kozhikode",
+    "Departure": "00:00",
+    "SeatCount": 45
+  },
+  {
+    "Bus_name": "KSRTC2",
+    "Bus_type": "SuperFast",
+    "Source": "Pathanamthitta",
+    "Destination": "Kozhikode",
+    "Departure": "00:00",
+    "SeatCount": 45
+  }
+]

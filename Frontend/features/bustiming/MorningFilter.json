@@ -1,0 +1,18 @@
+[
+  {
+    "Bus_name": "KSRTC08",
+    "Bus_type": "Ordinary",
+    "Source": "Thiruvananthapuram",
+    "Destination": "Kottayam",
+    "Departure": "10:40",
+    "SeatCount": 35
+  },
+  {
+    "Bus_name": "KSRTC19",
+    "Bus_type": "FastPassenger",
+    "Source": "Malappuram",
+    "Destination": "Kollam",
+    "Departure": "08:55",
+    "SeatCount": 52
+  }
+]
