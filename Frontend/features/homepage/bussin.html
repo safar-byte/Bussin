@@ -36,11 +36,10 @@
         <h2>Enter Bus Details:</h2>
         <form id="form">
           <div class="busDetails">
-            <label for="name"
-              >Bus Name:
-              <input type="text" name="busName" id="busName" required
-            /></label>
-            <label for="type">
+          <div class="group-form"><label for="name"
+            >Bus Name:
+            <input type="text" name="busName" id="busName" required /></label></div>
+            <div class="group-form"><label for="type">
               Bus Type:
               <select name="type" id="busType" required >
                 <option value="" selected disabled>Select the Bus Type</option>
@@ -48,14 +47,13 @@
                 <option value="FastPassenger">FastPassenger</option>
                 <option value="Ordinary">Ordinary</option>
               </select>
-            </label>
-            <label for="seatCount"
-              >Seat Count:
-              <input type="number" name="seatCount" id="seatCount" min="20" max="60" required
-            /></label>
+            </label></div>
+            <div class="group-form"> <label for="seatCount">Seat Count:
+              <input type="number" name="seatCount" id="seatCount" min="20" max="60" required/></label></div>
+           
           </div>
           <div class="travelDetails">
-            <label for="source">Source:
+            <div class="group-form"><label for="source">Source:
               <select name="source" id="sourcePlace" required >
                 <option value="" selected disabled>Select the Source</option>
                   <option value="Thiruvananthapuram">Thiruvananthapuram</option>
@@ -73,8 +71,8 @@
                   <option value="Kannur">Kannur</option>
                   <option value="Kasaragod">Kasaragod</option>
               </select>
-              </label>
-            <label for="destination">Destination:
+              </label></div>
+            <div class="group-form"><label for="destination">Destination:
               <select name="dest" id="destinationPlace" required>
                 <option value="" selected disabled>Select the Destination</option>
                 <option value="Thiruvananthapuram">Thiruvananthapuram</option>
@@ -92,11 +90,10 @@
                   <option value="Kannur">Kannur</option>
                   <option value="Kasaragod">Kasaragod</option>
               </select>
-            </label>
-            <label for="time"
+            </label></div>
+            <div class="group-form"><label for="time"
               >Departure Time:
-              <input type="time" name="time" id="time" required
-            /></label>
+              <input type="time" name="time" id="time" required/></label></div>
           </div>
           <div class="submitBtnDiv">
             <input type="submit" value="Submit" id="submitBtn" />
