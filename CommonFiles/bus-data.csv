@@ -1,5 +1,5 @@
 "name","type","source","destination","departure","seatCount"
-"KSRTC01","SuperFast","Thiruvananthapuram","Kollam","14:25","30"
+"KSRTC01","SuperFast","Thiruvananthapuram","Kollam","14:25","5"
 "KSRTC02","FastPassenger","Kollam","Pathanamthitta","20:30","50"
 "KSRTC03","Ordinary","Ernakulam","Kottayam","02:45","35"
 "KSRTC04","SuperFast","Kozhikode","Pathanamthitta","23:00","50"
