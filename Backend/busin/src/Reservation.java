@@ -46,8 +46,7 @@
     import java.util.ArrayList;
 
     public class Reservation {
-        Integer cnc = 0; // Indicator for seat cancellation exception
-        Integer resv = 0; // Indicator for seat reservation exception
+       // Indicator for seat reservation exception
 
         public void seatUpdater(ArrayList<Bus> bus, ArrayList<Reserve> res) {
             for (Reserve varRes : res) { // Loop over each reservation entry
@@ -59,12 +58,12 @@
                                 if (Integer.parseInt(newbus.getSeatcnt()) >= 0) { // If seats are available
                                     newbus.setReserve(newbus.getReserve() - 1); // Update reservation count
                                     System.out.println("SEAT RESERVED FOR  " + newbus.getBusName());
-                                    if (cnc == 1) {
-                                        cnc = 0; // Reset cancellation exception indicator
+                                    if (newbus.getCnc() == 1) {
+                                        newbus.setCnc(0);  // Reset cancellation exception indicator
                                     }
-                                } else if (resv != 1) { // If reservation exception not triggered
+                                } else if (newbus.getResv() != 1) { // If reservation exception not triggered
                                     newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1)); // Revert seat count
-                                    resv = 1; // Set reservation exception indicator
+                                    newbus.setResv(1); // Set reservation exception indicator
                                     throw new Exception("SEATS ARE FULL AFTER " + newbus.getBusName() + " after " + newbus.getReserve());
                                 }
                                 else{
@@ -81,12 +80,12 @@
                                 if (Integer.parseInt(newbus.getSeatcnt()) <= Integer.parseInt(newbus.getMaxCnt())) { // If seats are within capacity
                                     newbus.setCancel(newbus.getCancel() + 1); // Update cancellation count
                                     System.out.println("SEAT CANCELLED FOR  " + newbus.getBusName());
-                                    if (resv == 1) {
-                                        resv = 0; // Reset reservation exception indicator
+                                    if (newbus.getResv() == 1) {
+                                        newbus.setResv(0); // Reset reservation exception indicator
                                     }
-                                } else if (cnc != 1) { // If cancellation exception not triggered
+                                } else if (newbus.getCnc() != 1) { // If cancellation exception not triggered
                                     newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) - 1)); // Revert seat count
-                                    cnc = 1; // Set cancellation exception indicator
+                                    newbus.setCnc(1);  // Set cancellation exception indicator
                                     throw new Exception("NO SEATS ARE RESERVED AFTER CANCEL " + newbus.getCancel()+"for"+newbus.getBusName());
                                 }
                                 else {

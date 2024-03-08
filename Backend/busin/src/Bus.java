@@ -9,6 +9,25 @@ public class Bus{
     private Integer reserve=0;
     private Integer cancel=0;
 
+    public Integer getCnc() {
+        return cnc;
+    }
+
+    public void setCnc(Integer cnc) {
+        this.cnc = cnc;
+    }
+
+    public Integer getResv() {
+        return resv;
+    }
+
+    public void setResv(Integer resv) {
+        this.resv = resv;
+    }
+
+    private Integer cnc = 0; // Indicator for seat cancellation exception
+    private Integer resv = 0;
+
     public Integer getReserve() {
         return reserve;
     }
@@ -41,6 +60,8 @@ public class Bus{
         maxCnt=seatcnt;
 
     }
+
+
 //added again
     public String getMaxCnt() {
         return maxCnt;

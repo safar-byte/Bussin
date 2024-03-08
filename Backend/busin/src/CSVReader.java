@@ -20,29 +20,29 @@ public class CSVReader {
                 if (values.length != 6) {
                     throw new Exception("Invalid cvs file");
                 }
-                String busName = values[0].trim();
-                String busType = values[1].trim();
-                String busSource = values[2].trim();
-                String busDestination = values[3].trim();
-                String busDeparture = values[4].trim();
-                String seatCount = values[5].trim();
+                String busName = values[0].trim().replaceAll("^\"|\"$", "");
+                String busType = values[1].trim().replaceAll("^\"|\"$", "");
+                String busSource = values[2].trim().replaceAll("^\"|\"$", "");
+                String busDestination = values[3].trim().replaceAll("^\"|\"$", "");
+                String busDeparture = values[4].trim().replaceAll("^\"|\"$", "");
+                String seatCount = values[5].trim().replaceAll("^\"|\"$", "");
                 if (busName.isEmpty()) {
-                    throw new Exception("Bus name not found");
+                    throw new Exception("Bus name not found in Bus file");
                 }
                 if (busType.isEmpty()) {
-                    throw new Exception("Bus Type not found");
+                    throw new Exception("Bus Type not found in Bus file");
                 }
                 if (busSource.isEmpty()) {
-                    throw new Exception("Bus Source not found");
+                    throw new Exception("Bus Source not found in Bus file");
                 }
                 if (busDestination.isEmpty()) {
-                    throw new Exception("Bus Destination not found");
+                    throw new Exception("Bus Destination not found in Bus file");
                 }
                 if (busDeparture.isEmpty()) {
-                    throw new Exception("Bus Departure date not found");
+                    throw new Exception("Bus Departure date not found in Bus file");
                 }
                 if (seatCount.isEmpty()) {
-                    throw new Exception("Seat Count not found");
+                    throw new Exception("Seat Count not found in Bus file");
                 }
                 bus.add(new Bus(values[0].replaceAll("^\"|\"$", ""), values[1].replaceAll("^\"|\"$", ""), values[2].replaceAll("^\"|\"$", ""), values[3].replaceAll("^\"|\"$", ""), values[4].replaceAll("^\"|\"$", ""), values[5].replaceAll("^\"|\"$", "")));
             }catch (Exception e){
@@ -51,8 +51,7 @@ public class CSVReader {
 
         }
         }
-        System.out.println("FILE READ SUCCESSFULLY");
-        //for(Bus hi:bus) System.out.println(hi.getBusDepature()+hi.getBusDestination()+hi.getBusSource()+hi.getBusType()+hi.getBusArrival()+hi.getBusName());
+        System.out.println("FILE READ SUCCESSFULLY FORM BUS FILE");
         return bus;
     }
     //added
@@ -68,14 +67,14 @@ public class CSVReader {
                 if (values.length != 2) {
                     throw new Exception("Invalid cvs file");
                 }
-                String busName = values[0].trim();
-                String busAction = values[1].trim();
+                String busName = values[0].trim().replaceAll("^\"|\"$", "");
+                String busAction = values[1].trim().replaceAll("^\"|\"$", "");
 
                 if (busName.isEmpty()) {
-                    throw new Exception("Bus name not found");
+                    throw new Exception("Bus Action not found in reservation file");
                 }
                 if (busAction.isEmpty()) {
-                    throw new Exception("Bus Action not found");
+                    throw new Exception("Bus Name not found in reservation file");
                 }
                 reserves.add(new Reserve(values[0].replaceAll("^\"|\"$", ""), values[1].replaceAll("^\"|\"$", "")));
             }catch (Exception e){
@@ -84,8 +83,7 @@ public class CSVReader {
 
             }
         }
-        System.out.println("FILE READ SUCCESSFULLY");
-        //for(Bus hi:bus) System.out.println(hi.getBusDepature()+hi.getBusDestination()+hi.getBusSource()+hi.getBusType()+hi.getBusArrival()+hi.getBusName());
+        System.out.println("FILE READ SUCCESSFULLY FORM RESERVATION FILE");
         return reserves;
     }
 
