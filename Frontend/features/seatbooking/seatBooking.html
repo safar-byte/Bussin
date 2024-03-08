@@ -39,15 +39,37 @@
       <form id="form">
         <div class="busDetails">
           <div class="BusNameInputField">
-            <label for="busName"><b>Bus Name:</b>
-              <input type="text" name="busName" id="busName" required /></label>
+            <label for="busName">Bus Name:
+              <select name="name" id="busName" required >
+                <option value="" selected disabled>Select the Bus</option>
+                <option value="KSRTC01">KSRTC01</option>
+                <option value="KSRTC02">KSRTC02</option>
+                <option value="KSRTC03">KSRTC03</option>
+                <option value="KSRTC04">KSRTC04</option>
+                <option value="KSRTC05">KSRTC05</option>
+                <option value="KSRTC06">KSRTC06</option>
+                <option value="KSRTC07">KSRTC07</option>
+                <option value="KSRTC08">KSRTC08</option>
+                <option value="KSRTC09">KSRTC09</option>
+                <option value="KSRTC10">KSRTC10</option>
+                <option value="KSRTC11">KSRTC11</option>
+                <option value="KSRTC12">KSRTC12</option>
+                <option value="KSRTC13">KSRTC13</option>
+                <option value="KSRTC14">KSRTC14</option>
+                <option value="KSRTC15">KSRTC15</option>
+                <option value="KSRTC16">KSRTC16</option>
+                <option value="KSRTC17">KSRTC17</option>
+                <option value="KSRTC18">KSRTC18</option>
+                <option value="KSRTC19">KSRTC19</option>
+                <option value="KSRTC20">KSRTC20</option>
+              </select></label>
           </div>
           <div class="optionSelections">
-            <label for="optionSelection"><b>Select option:</b>
+            <label for="optionSelection">Select option:
               <input type="radio" name="optedValue" id="reserve" value="Reservation" />
-              <label for="reserve">Reservation</label>
+              <label for="reserve" style="font-weight: normal;">Reservation</label>
               <input type="radio" name="optedValue" id="leave" value="Leave" />
-              <label for="leave">Leave</label>
+              <label for="leave" style="font-weight: normal;">Leave</label>
             </label>
           </div>
 
