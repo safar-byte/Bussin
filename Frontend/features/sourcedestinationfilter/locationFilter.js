@@ -44,6 +44,6 @@ function showData(ev){
         row.insertCell(0).innerHTML = "No Bus available";
 
     });
-
+    document.getElementById("form").reset();
     
 }

@@ -26,52 +26,54 @@
     <header>
       <h1>BUSSIN.com</h1>
     </header>
-    <div id="createForm">
-      <h2>Find Your Bus!</h2>
-      <div class="sorceDestInput">
-        <label for="source">Source:
-          <select name="source" id="sourcePlace" required >
-            <option value="" selected disabled>Select the Source</option>
-                  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-                  <option value="Kollam">Kollam</option>
-                  <option value="Alappuzha">Alappuzha</option>
-                  <option value="Pathanamthitta">Pathanamthitta</option>
-                  <option value="Kottayam">Kottayam</option>
-                  <option value="Idukki">Idukki</option>
-                  <option value="Ernakulam">Ernakulam</option>
-                  <option value="Thrissur">Thrissur</option>
-                  <option value="Palakkad">Palakkad</option>
-                  <option value="Malappuram">Malappuram</option>
-                  <option value="Kozhikode">Kozhikode</option>
-                  <option value="Wayanad">Wayanad</option>
-                  <option value="Kannur">Kannur</option>
-                  <option value="Kasaragod">Kasaragod</option>
-        </select>
-        </label>
-        <label for="destination">Destination:
-          <select name="dest" id="destinationPlace" required >
-            <option value="" selected disabled>Select the Destination</option>
-                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-                  <option value="Kollam">Kollam</option>
-                  <option value="Alappuzha">Alappuzha</option>
-                  <option value="Pathanamthitta">Pathanamthitta</option>
-                  <option value="Kottayam">Kottayam</option>
-                  <option value="Idukki">Idukki</option>
-                  <option value="Ernakulam">Ernakulam</option>
-                  <option value="Thrissur">Thrissur</option>
-                  <option value="Palakkad">Palakkad</option>
-                  <option value="Malappuram">Malappuram</option>
-                  <option value="Kozhikode">Kozhikode</option>
-                  <option value="Wayanad">Wayanad</option>
-                  <option value="Kannur">Kannur</option>
-                  <option value="Kasaragod">Kasaragod</option>
+    <form id="form">
+      <div id="createForm">
+        <h2>Find Your Bus!</h2>
+        <div class="sorceDestInput">
+          <label for="source">Source:
+            <select name="source" id="sourcePlace" required >
+              <option value="" selected disabled>Select the Source</option>
+                    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                    <option value="Kollam">Kollam</option>
+                    <option value="Alappuzha">Alappuzha</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                    <option value="Kottayam">Kottayam</option>
+                    <option value="Idukki">Idukki</option>
+                    <option value="Ernakulam">Ernakulam</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="Palakkad">Palakkad</option>
+                    <option value="Malappuram">Malappuram</option>
+                    <option value="Kozhikode">Kozhikode</option>
+                    <option value="Wayanad">Wayanad</option>
+                    <option value="Kannur">Kannur</option>
+                    <option value="Kasaragod">Kasaragod</option>
           </select>
-        </label>
+          </label>
+          <label for="destination">Destination:
+            <select name="dest" id="destinationPlace" required >
+              <option value="" selected disabled>Select the Destination</option>
+                  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                    <option value="Kollam">Kollam</option>
+                    <option value="Alappuzha">Alappuzha</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                    <option value="Kottayam">Kottayam</option>
+                    <option value="Idukki">Idukki</option>
+                    <option value="Ernakulam">Ernakulam</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="Palakkad">Palakkad</option>
+                    <option value="Malappuram">Malappuram</option>
+                    <option value="Kozhikode">Kozhikode</option>
+                    <option value="Wayanad">Wayanad</option>
+                    <option value="Kannur">Kannur</option>
+                    <option value="Kasaragod">Kasaragod</option>
+            </select>
+          </label>
+        </div>
+        <div class="submitBtnDiv">
+          <input type="submit" value="Search" id="submitBtn" />
+        </div>
       </div>
-      <div class="submitBtnDiv">
-        <input type="submit" value="Search" id="submitBtn" />
-      </div>
-    </div>
+    </form>
     <div class="mid">
       <table>
         <thead>
