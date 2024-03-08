@@ -21,10 +21,10 @@ import java.util.ArrayList;
                                 } else if (newbus.getResv() != 1) {
                                     newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) + 1));
                                     newbus.setResv(1);
-                                    throw new Exception("SEATS ARE FULL AFTER " + newbus.getBusName() + " after " + newbus.getReserve());
+                                    throw new Exception("SEATS ARE FULL FOR " + newbus.getBusName() + " AFTER " + newbus.getReserve());
                                 }
                                 else{
-                                    throw new Exception("NO RESERVATION");
+                                    throw new Exception("NO SEATS ARE AVAILABLE");
                                 }
                             }
                         }
@@ -40,13 +40,14 @@ import java.util.ArrayList;
                                     if (newbus.getResv() == 1) {
                                         newbus.setResv(0);
                                     }
-                                } else if (newbus.getCnc() != 1) {
+                                }
+                                else if (newbus.getCnc() != 1) {
                                     newbus.setSeatcnt(String.valueOf(Integer.parseInt(newbus.getSeatcnt()) - 1));
                                     newbus.setCnc(1);
-                                    throw new Exception("NO SEATS ARE RESERVED AFTER CANCEL " + newbus.getCancel()+"for"+newbus.getBusName());
+                                    throw new Exception("NO SEATS ARE RESERVED AFTER CANCEL " + newbus.getCancel()+" FOR "+newbus.getBusName());
                                 }
                                 else {
-                                    throw new Exception("NO SEATS");
+                                    throw new Exception("SEATS ARE AVAILABLE FOR RESERVATION");
                                 }
                             }
                         }
