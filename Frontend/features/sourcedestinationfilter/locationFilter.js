@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById("submitBtn").addEventListener('click',showData);
 })
 
-let tablerow = document.getElementById("entries");
-
 
 function showData(ev){
     ev.preventDefault();
@@ -22,15 +20,20 @@ function showData(ev){
     }
     else if (splace && dplace == ''){
         place = `${splace}source`
+    }else{
+        window.alert("Select source or Destination")
+
     }
     
-    console.log(`${place}`)
+    let tablerow = document.getElementById("entries");
+    // console.log(`${place}`)
  
     fetch(`${place}.json`)
     .then(response => response.json())
     .then(datas => datas.forEach(data => {
-        
+
         let row = tablerow.insertRow(-1);
+        
         row.insertCell(0).innerHTML = data.Bus_name;
         row.insertCell(1).innerHTML = data.Bus_type;
         row.insertCell(2).innerHTML = data.Source;
@@ -41,8 +44,8 @@ function showData(ev){
     }))
     .catch(error => {
         let row = tablerow.insertRow(0);
-        row.insertCell(0).innerHTML = "No Bus available";
-
+        if(place)
+            row.insertCell(0).innerHTML = "No Bus available";
     });
     document.getElementById("form").reset();
     
