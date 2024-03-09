@@ -8,10 +8,10 @@ user-friendly form.
 
 * **Filtering:** The system filters the generated bus schedule information based on the user's specified criteria including:
   
-    *Source*
-    *Destination*
-    *Both Source and Destination*
-    *Time Range*
+    1. *Source*
+    2. *Destination*
+    3. *Both Source and Destination*
+    4. *Time Range*
 
 * **Display:** Filtered bus details are displayed for the user, providing providing users with an overview of all available buses at a glance.
   
