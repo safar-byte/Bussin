@@ -13,7 +13,7 @@ user-friendly form.
     3. *Both Source and Destination*
     4. *Time Range*
 
-* **Display:** Filtered bus details are displayed for the user, providing providing users with an overview of all available buses at a glance.
+* **Display:** Filtered bus details are displayed for the user, providing users with an overview of all available buses at a glance.
   
 * **Export Bus Details:** It has a functionality to export the entered bus details as a JSON file by clicking on the export button.
 
