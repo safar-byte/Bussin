@@ -21,7 +21,7 @@ release seats on available buses directly through the interface.
 ## Usage
 The website's homepage allows the user to input the bus details and it is displayed in a tabular manner which can be exported as a JSON file. The side navigation bar allows one to navigate to the bus count page, seat booking page, time range and source and destination filtering pages. 
 
-![homepage](/assets/homepage.jpg "Homepage")
+![homepage](Assets/Homepage.jpeg "Homepage")
 
 ## Contributing
 Contributions to the project are welcome! Feel free to fork the repository, make your changes, and submit a pull request.
