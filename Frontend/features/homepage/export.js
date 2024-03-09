@@ -18,18 +18,14 @@ function exportToJsonFile() {
     }
 
     let json = JSON.stringify(dataArray, null, 4);
-
     let blob = new Blob([json], {type: "application/json"});
-    // let isblob = blob instanceof Blob
-
     let url = URL.createObjectURL(blob);
     let a = document.createElement("a");
 
     console.log(dataArray.length)
 
-    /////////////// null finder //////////////////
 
-    if(dataArray.length == 0){
+    if(dataArray.length == 0){ //No data is available in the table 
         window.alert("no data to export")
     }else{
         window.alert("data exported")
@@ -37,11 +33,5 @@ function exportToJsonFile() {
         a.href = url;
         a.textContent = "Download bus-data.json";
         a.click();
-    }
-
-    ////////////////////////////////////////////////
-
-    
-
-    
+    }    
 }

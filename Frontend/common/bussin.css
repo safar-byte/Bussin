@@ -11,6 +11,34 @@ body{
     height: 100vh;
     width: calc(100% - 300px);
 }
+.busDetails,.travelDetails {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin-bottom: 5px; 
+  }
+  
+  .group-form {
+    display: flex;
+    flex-basis: calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px); 
+  }
+  
+  .group-form label {
+    margin-bottom: 2px; 
+    font-weight: bold;
+  }
+  
+  .group-form input,
+  .group-form select {
+    width: 310px; 
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc; 
+    box-shadow: 0px 0px 5px gray;
+  }
+
+  
 
 header{
     display: flex;
@@ -23,37 +51,15 @@ header{
 
 #createButton{
     color: #ffffff;
-    background: #633eea;
+    background-color: #633eea;
     border-radius: 5px;
     height: 30px;
     width: 100px;
     cursor: pointer;   
-    transition: .3s ease;     
 }
 #createButton:hover{
     background-color: #5224a5;
 
-}
-
-.busDetails{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-}
-
-input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
-    width: 200px;
-    height: 20px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px black;
-    border: 0;
-}
-
-.travelDetails{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
 }
 .scrollingEffect{
     text-align: left;
@@ -90,6 +96,7 @@ input[type="text"],#busType,#seatCount,#time,#sourcePlace,#destinationPlace{
 .submitBtnDiv{
     display: flex;
     justify-content: center;
+    margin: 0px;
 
 }
 

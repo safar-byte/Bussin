@@ -28,7 +28,7 @@ header{
 
 .mid{
     position: relative;
-    min-height: calc(100vh - 343px);
+    min-height: calc(100vh - 347px);
     margin: 20px;
     text-align: center;
     border: 2px;
@@ -56,11 +56,6 @@ header{
     overflow: auto;
 }
 
-label{
-    font-size: 18px;
-    margin-right: 10px;
-}
-
 .optionSelections,.BusNameInputField,.submitButton{
     display: flex;
     justify-content: space-around;
@@ -69,11 +64,19 @@ label{
 .BusNameInputField,.optionSelections{
     padding-bottom: 10px;
 }
-
-
+#busName{
+    width: 250px; 
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc; 
+    box-shadow: 0px 0px 5px gray;
+}
 
 input[type="submit"]:hover {
     background-color: #5224a5;
+}
+label{
+    font-size: 17px;
 }
 
 #exportButton{

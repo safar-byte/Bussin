@@ -1,0 +1,162 @@
+[
+    {
+        "name": "KSRTC01",
+        "type": "SuperFast",
+        "source": "Thiruvananthapuram",
+        "destination": "Kollam",
+        "departure": "14:25",
+        "seatCount": "30"
+    },
+    {
+        "name": "KSRTC02",
+        "type": "FastPassenger",
+        "source": "Kollam",
+        "destination": "Pathanamthitta",
+        "departure": "20:30",
+        "seatCount": "50"
+    },
+    {
+        "name": "KSRTC03",
+        "type": "Ordinary",
+        "source": "Ernakulam",
+        "destination": "Kottayam",
+        "departure": "02:45",
+        "seatCount": "35"
+    },
+    {
+        "name": "KSRTC04",
+        "type": "SuperFast",
+        "source": "Kozhikode",
+        "destination": "Pathanamthitta",
+        "departure": "23:00",
+        "seatCount": "50"
+    },
+    {
+        "name": "KSRTC05",
+        "type": "FastPassenger",
+        "source": "Palakkad",
+        "destination": "Malappuram",
+        "departure": "14:45",
+        "seatCount": "35"
+    },
+    {
+        "name": "KSRTC06",
+        "type": "FastPassenger",
+        "source": "Kozhikode",
+        "destination": "Kannur",
+        "departure": "07:35",
+        "seatCount": "50"
+    },
+    {
+        "name": "KSRTC07",
+        "type": "SuperFast",
+        "source": "Palakkad",
+        "destination": "Kasaragod",
+        "departure": "18:50",
+        "seatCount": "45"
+    },
+    {
+        "name": "KSRTC08",
+        "type": "Ordinary",
+        "source": "Thiruvananthapuram",
+        "destination": "Kottayam",
+        "departure": "10:40",
+        "seatCount": "35"
+    },
+    {
+        "name": "KSRTC09",
+        "type": "FastPassenger",
+        "source": "Kollam",
+        "destination": "Kasaragod",
+        "departure": "20:00",
+        "seatCount": "35"
+    },
+    {
+        "name": "KSRTC10",
+        "type": "FastPassenger",
+        "source": "Thiruvananthapuram",
+        "destination": "Kollam",
+        "departure": "20:50",
+        "seatCount": "50"
+    },
+    {
+        "name": "KSRTC11",
+        "type": "Ordinary",
+        "source": "Thrissur",
+        "destination": "Ernakulam",
+        "departure": "04:42",
+        "seatCount": "39"
+    },
+    {
+        "name": "KSRTC12",
+        "type": "SuperFast",
+        "source": "Wayanad",
+        "destination": "Kollam",
+        "departure": "02:43",
+        "seatCount": "52"
+    },
+    {
+        "name": "KSRTC13",
+        "type": "Ordinary",
+        "source": "Thiruvananthapuram",
+        "destination": "Kollam",
+        "departure": "22:05",
+        "seatCount": "45"
+    },
+    {
+        "name": "KSRTC14",
+        "type": "SuperFast",
+        "source": "Thiruvananthapuram",
+        "destination": "Pathanamthitta",
+        "departure": "16:30",
+        "seatCount": "55"
+    },
+    {
+        "name": "KSRTC15",
+        "type": "FastPassenger",
+        "source": "Palakkad",
+        "destination": "Kottayam",
+        "departure": "19:25",
+        "seatCount": "55"
+    },
+    {
+        "name": "KSRTC16",
+        "type": "Ordinary",
+        "source": "Kannur",
+        "destination": "Malappuram",
+        "departure": "14:45",
+        "seatCount": "44"
+    },
+    {
+        "name": "KSRTC17",
+        "type": "FastPassenger",
+        "source": "Pathanamthitta",
+        "destination": "Palakkad",
+        "departure": "01:00",
+        "seatCount": "30"
+    },
+    {
+        "name": "KSRTC18",
+        "type": "Ordinary",
+        "source": "Kollam",
+        "destination": "Thiruvananthapuram",
+        "departure": "21:45",
+        "seatCount": "33"
+    },
+    {
+        "name": "KSRTC19",
+        "type": "FastPassenger",
+        "source": "Malappuram",
+        "destination": "Kollam",
+        "departure": "08:55",
+        "seatCount": "52"
+    },
+    {
+        "name": "KSRTC20",
+        "type": "SuperFast",
+        "source": "Kollam",
+        "destination": "Kozhikode",
+        "departure": "00:00",
+        "seatCount": "45"
+    }
+]
