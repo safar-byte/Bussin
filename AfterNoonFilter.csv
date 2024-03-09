@@ -1,0 +1,4 @@
+Bus_name,Bus_type,Source,Destination,Departure,SeatCount
+KSRTC01,SuperFast,Thiruvananthapuram,Kollam,14:25,30
+KSRTC05,FastPassenger,Palakkad,Malappuram,14:45,35
+KSRTC16,Ordinary,Kannur,Malappuram,14:45,44

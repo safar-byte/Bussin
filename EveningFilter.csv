@@ -1,0 +1,4 @@
+Bus_name,Bus_type,Source,Destination,Departure,SeatCount
+KSRTC07,SuperFast,Palakkad,Kasaragod,18:50,45
+KSRTC14,SuperFast,Thiruvananthapuram,Pathanamthitta,16:30,55
+KSRTC15,FastPassenger,Palakkad,Kottayam,19:25,55

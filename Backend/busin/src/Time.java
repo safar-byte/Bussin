@@ -35,10 +35,10 @@ public class Time {
         LocalTime StartTime = LocalTime.parse(strTime, formatter);
         LocalTime endTime = LocalTime.parse(endingTime, formatter);
 
-
+//add
         for (Bus bus : bustime) {
             LocalTime departure = LocalTime.parse(bus.getBusDeparture(), formatter);
-            if (departure.isAfter(StartTime) && departure.isBefore(endTime)) {
+            if ((departure.isAfter(StartTime) || departure.equals(strTime)) && (departure.isBefore(endTime) || departure.equals(endTime))) {
                 timeShedule.add(bus);
             }
 

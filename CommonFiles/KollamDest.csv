@@ -1,0 +1,11 @@
+Bus_name,Bus_type,Source,Destination,Departure,SeatCount
+KSRTC01,SuperFast,Thiruvananthapuram,Kollam,14:25,5
+KSRTC08,Ordinary,Thiruvananthapuram,Kottayam,10:40,35
+KSRTC10,FastPassenger,Thiruvananthapuram,Kollam,20:50,50
+KSRTC13,Ordinary,Thiruvananthapuram,Kollam,22:05,45
+KSRTC14,SuperFast,Thiruvananthapuram,Pathanamthitta,16:30,55
+KSRTC01,SuperFast,Thiruvananthapuram,Kollam,14:25,5
+KSRTC10,FastPassenger,Thiruvananthapuram,Kollam,20:50,50
+KSRTC12,SuperFast,Wayanad,Kollam,02:43,52
+KSRTC13,Ordinary,Thiruvananthapuram,Kollam,22:05,45
+KSRTC19,FastPassenger,Malappuram,Kollam,08:55,52
