@@ -7,7 +7,11 @@ This project is a Bus Details Management System designed to manage and display b
 user-friendly form.
 
 * **Filtering:** The system filters the generated bus schedule information based on the user's specified criteria including:
-    *Source*    *Destination*    *Both Source and Destination*    *Time Range*
+  
+    *Source*
+    *Destination*
+    *Both Source and Destination*
+    *Time Range*
 
 * **Display:** Filtered bus details are displayed for the user, providing providing users with an overview of all available buses at a glance.
   
