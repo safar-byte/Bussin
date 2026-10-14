@@ -1,31 +1,75 @@
-# Bussin
-## Introduction
-This project is a Bus Details Management System designed to manage and display bus schedules based on user inputs regarding bus details such as source, destination, type, and time range. The system allows users to input bus details and then filter the generated information based on specific criteria.
+<div align="center">
+
+# 🚌 Bussin
+
+**A bus schedule and seat-booking manager for Kerala routes — Java backend, vanilla JS frontend.**
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+
+![Bussin homepage](Assets/Homepage.jpeg)
+
+</div>
+
+## Overview
+
+Bussin manages bus details — name, type, source, destination, departure time and available seats — and lets you slice that schedule the way a commuter actually asks questions: *"what leaves Thiruvananthapuram for Kollam this evening?"*
+
+The project has two halves that share the same CSV data:
+
+- **Backend (Java)** — a console application that reads bus data from CSV, filters it and writes the results back out as CSV.
+- **Frontend (HTML/CSS/JS)** — a browser UI for entering buses, browsing the filtered schedules, counting buses by type and booking seats.
+
+A full write-up is in [`BUSSIN.com Project Documentation.pdf`](BUSSIN.com%20Project%20Documentation.pdf).
 
 ## Features
-* **Input Bus Details:** A detailed information about buses, including unique bus name, bus type, source, destination, departure time, and available seats, can be input through a
-user-friendly form.
 
-* **Filtering:** The system filters the generated bus schedule information based on the user's specified criteria including:
-  
-    1. *Source*
-    2. *Destination*
-    3. *Both Source and Destination*
-    4. *Time Range*
+| Feature | What it does |
+|---|---|
+| **Add buses** | Enter bus details through a form; they appear in a table on the homepage. |
+| **Export** | Download the entered buses as a JSON file. |
+| **Source / destination filter** | Filter by source, destination, or both. |
+| **Time-range filter** | Morning (08–12), afternoon (12–16), evening (16–20) and night (20–08) slots. |
+| **Bus type counts** | See how many buses of each type are running. |
+| **Seat booking** | Reserve or release seats on a given bus. |
 
-* **Display:** Filtered bus details are displayed for the user, providing users with an overview of all available buses at a glance.
-  
-* **Export Bus Details:** It has a functionality to export the entered bus details as a JSON file by clicking on the export button.
+## Project structure
 
-* **Seat Booking:** The system facilitates seat booking operations, allowing users to reserve or
-release seats on available buses directly through the interface.
+```
+Backend/busin/src/        Java console app — Main, Bus, Reservation, filters, CSV reader/writer
+Frontend/
+  common/                 shared form/table components, alert box, styles
+  features/
+    homepage/             add buses + JSON export
+    sourcedestinationfilter/
+    bustiming/            time-range views
+    buscount/             counts by bus type
+    seatbooking/          reserve / release seats
+CommonFiles/              sample and generated CSV data
+```
 
-* **Bus Type Counts:** Users can view counts of buses based on their type, providing insights into the distribution of different bus types within the system
+## Getting started
 
-## Usage
-The website's homepage allows the user to input the bus details and it is displayed in a tabular manner which can be exported as a JSON file. The side navigation bar allows one to navigate to the bus count page, seat booking page, time range and source and destination filtering pages. 
+**Backend**
 
-![homepage](Assets/Homepage.jpeg "Homepage")
+```bash
+cd Backend/busin/src
+javac *.java
+java Main
+```
 
-## Contributing
-Contributions to the project are welcome! Feel free to fork the repository, make your changes, and submit a pull request.
+Pick an option from the menu (filter by source/destination, by time range, by bus type, or make a reservation). Output CSVs are written alongside the inputs.
+
+**Frontend**
+
+Open `Frontend/features/homepage/bussin.html` in a browser — or serve the folder with any static server (e.g. VS Code Live Server) so the JSON files load correctly.
+
+## Tech stack
+
+Java (core, file I/O) · HTML5 · CSS3 · JavaScript
+
+## Author
+
+**Muhammed Safar** — [@safar-byte](https://github.com/safar-byte)
